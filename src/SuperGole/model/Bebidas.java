@@ -10,5 +10,16 @@ package SuperGole.model;
  * @author Adroan
  */
 public class Bebidas {
+    private int id;
+    private String nome;
+    private String image;
+    private float TeorAlco;
+    private float preco;
+    private float custBene;
+    private int gosto;
+    private int Amnesia;
     
+    public static void gerarBebidas(){
+        
+    } 
 }
