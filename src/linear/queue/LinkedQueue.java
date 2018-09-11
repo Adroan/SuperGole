@@ -1,6 +1,5 @@
 package linear.queue;
 
-import linear.base.SinglyLinkedList;
 
 public class LinkedQueue<E> implements Queue<E> {
 	private SinglyLinkedList<E> list = new SinglyLinkedList<>();
