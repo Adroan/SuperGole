@@ -132,15 +132,15 @@ public class Bebidas {
             bebida.setGosto(gosto[i]);
             bebida.setAmnesia(amnesia[i]);
             boolean cartaInserida = false;
-            while(cartaInserida = false){
+            while(cartaInserida == false){
               int numAleatorio = gerador.nextInt(32);
                 if(deck.get(numAleatorio) == null){
                     deck.add(numAleatorio,bebida);
                     i += 1;
                     cartaInserida = true;
-                    System.out.println(deck.toString());
+                    System.out.print("Posição: " + numAleatorio + " ");
+                    System.out.println("Id: " + bebida.getId()  + " ");
                 }
-                System.out.println(numAleatorio);
             }
 
 
