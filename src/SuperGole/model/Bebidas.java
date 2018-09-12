@@ -34,9 +34,16 @@ public class Bebidas {
         this.Amnesia = Amnesia;
     }
 
-    private Bebidas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Bebidas() {
+        super();
     }
+
+
+    public static ArrayList<Bebidas> getDeck() {
+        return deck;
+    }
+    
+    
 
     public int getId() {
         return id;
@@ -124,7 +131,14 @@ public class Bebidas {
             bebida.setCustBene(custBene[i]);
             bebida.setGosto(gosto[i]);
             bebida.setAmnesia(amnesia[i]);
-            deck.add(gerador.nextInt()*10,bebida);
+            int numAleatorio = gerador.nextInt()*10;
+            if((numAleatorio >= 0 && numAleatorio < 32) && (deck.get(numAleatorio) == null)){
+                deck.add(numAleatorio,bebida);
+            }
+            
+            System.out.println(deck.get(i));
        }
     } 
+
+    
 }
