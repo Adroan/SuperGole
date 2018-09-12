@@ -5,6 +5,7 @@
  */
 package SuperGole.model;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -15,13 +16,14 @@ public class Bebidas {
     private int id;
     private String nome;
     private String image;
-    private float TeorAlco;
-    private float preco;
-    private float custBene;
+    private double TeorAlco;
+    private double preco;
+    private double custBene;
     private int gosto;
     private int Amnesia;
+    protected  static ArrayList<Bebidas> deck;
 
-    public Bebidas(int id, String nome, String image, float TeorAlco, float preco, float custBene, int gosto, int Amnesia) {
+    public Bebidas(int id, String nome, String image, double TeorAlco, double preco, double custBene, int gosto, int Amnesia) {
         this.id = id;
         this.nome = nome;
         this.image = image;
@@ -30,6 +32,10 @@ public class Bebidas {
         this.custBene = custBene;
         this.gosto = gosto;
         this.Amnesia = Amnesia;
+    }
+
+    private Bebidas() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public int getId() {
@@ -56,27 +62,27 @@ public class Bebidas {
         this.image = image;
     }
 
-    public float getTeorAlco() {
+    public double getTeorAlco() {
         return TeorAlco;
     }
 
-    public void setTeorAlco(float TeorAlco) {
+    public void setTeorAlco(double TeorAlco) {
         this.TeorAlco = TeorAlco;
     }
 
-    public float getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    public void setPreco(float preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
 
-    public float getCustBene() {
+    public double getCustBene() {
         return custBene;
     }
 
-    public void setCustBene(float custBene) {
+    public void setCustBene(double custBene) {
         this.custBene = custBene;
     }
 
@@ -99,7 +105,6 @@ public class Bebidas {
     
     
     public static void gerarBebidas(){
-        Random gerador = new Random();
         int [] id ={25,28,22,20,11,27,30,4,10,8,6,31,16,9,26,7,24,5,14,2,13,21,12,15,32,1,19,29,18,17,3,23};
         String[] nome = {"51","3 pipa","Absinto neto costa","absolut","amarula","Bacardi","carta oro","balakov","brahma",
 "catuaba selvagem","Cerveja Lassberg","Cerveja Saint Bier","corote","dreher","Jurupinga","Natasha","Nova Schin","Rajska","Remy Martin Louis XIII conhaque",
@@ -110,5 +115,16 @@ public class Bebidas {
         Double[] custBene = {78.1d,90.6d,34.3d,28.1d,12.5d,59.3d,87.5d,43.7d,65.6d,40.6d,21.8d,93.7d,75d,31.2d,68.7d,53.1d,71.8d,3.1d,46.8d,6.2d,37.5d,56.2d,25d,18.75d,100d,0d,81.2d,84.3d,62.5d,9.3d,15.6d,50d};
         int [] gosto = {10,2,21,22,80,50,5,11,16,91,91,5,9,83,14,21,15,95,35,70,86,31,90,30,100,1,5,13,85,25,71,23};
         int [] amnesia ={61,76,98,91,83,85,87,26,30,4,4,82,32,58,89,10,90,0,73,55,5,88,5,92,100,1,60,62,43,93,67,80};
+        
+        for(int i = 0; i < 32;i++){
+            Random gerador = new Random();
+            Bebidas bebida = new Bebidas();
+            bebida.setNome(nome[i]);
+            bebida.setTeorAlco(teorAlcool[i]);
+            bebida.setCustBene(custBene[i]);
+            bebida.setGosto(gosto[i]);
+            bebida.setAmnesia(amnesia[i]);
+            deck.add(gerador.nextInt()*10,bebida);
+       }
     } 
 }
