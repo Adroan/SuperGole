@@ -138,8 +138,8 @@ public class Bebidas {
               int numAleatorio = gerador.nextInt(32);
                 System.out.println("Posição a verificar: " + numAleatorio + "  Conteúdo da posição: " +  deck.get(numAleatorio));
                 int achouNumeroIgual = VerificarNumeros(numAleatorio);
-                if(achouNumeroIgual == -1){
-                    deck.add(numAleatorio,bebida);
+                if((deck.get(numAleatorio) == null) && (achouNumeroIgual == -1)){
+                    deck.set(numAleatorio,bebida);
                     numerosSorteados[i] = numAleatorio;
                     i += 1;
                     cartaInserida = true;
@@ -153,6 +153,7 @@ public class Bebidas {
 
            
        }
+        System.out.println(deck.toString());
     } 
      public static void main(String [] args){
          gerarBebidas();
