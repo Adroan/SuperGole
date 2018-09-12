@@ -139,7 +139,7 @@ public class Bebidas {
                     i += 1;
                     cartaInserida = true;
                     System.out.print("Posição: " + numAleatorio + " ");
-                    System.out.println("Id: " + bebida.getId()  + " ");
+                    System.out.println("Nome: " + bebida.getNome()  + " ");
                 }
             }
 
