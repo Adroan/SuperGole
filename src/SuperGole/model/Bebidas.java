@@ -34,9 +34,6 @@ public class Bebidas {
         this.Amnesia = Amnesia;
     }
 
-    public Bebidas() {
-        super();
-    }
 
 
     public static ArrayList<Bebidas> getDeck() {
@@ -125,7 +122,7 @@ public class Bebidas {
         
         for(int i = 0; i < 32;i++){
             Random gerador = new Random();
-            Bebidas bebida = new Bebidas();
+            Bebidas bebida = new Bebidas(1,"a","a",1.0d,1.0d,1.0d,1,1);
             bebida.setNome(nome[i]);
             bebida.setTeorAlco(teorAlcool[i]);
             bebida.setCustBene(custBene[i]);
@@ -135,10 +132,11 @@ public class Bebidas {
             if((numAleatorio >= 0 && numAleatorio < 32) && (deck.get(numAleatorio) == null)){
                 deck.add(numAleatorio,bebida);
             }
-            
-            System.out.println(deck.get(i));
        }
     } 
+     public static void main(String [] args){
+         
+     }
 
     
 }
