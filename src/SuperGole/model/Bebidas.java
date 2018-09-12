@@ -21,7 +21,7 @@ public class Bebidas {
     private double custBene;
     private int gosto;
     private int Amnesia;
-    protected  static ArrayList<Bebidas> deck;
+    protected  static ArrayList<Bebidas> deck = new ArrayList<Bebidas>();
 
     public Bebidas(int id, String nome, String image, double TeorAlco, double preco, double custBene, int gosto, int Amnesia) {
         this.id = id;
@@ -33,7 +33,8 @@ public class Bebidas {
         this.gosto = gosto;
         this.Amnesia = Amnesia;
     }
-
+  public Bebidas() {
+        }
 
 
     public static ArrayList<Bebidas> getDeck() {
@@ -119,24 +120,48 @@ public class Bebidas {
         Double[] custBene = {78.1d,90.6d,34.3d,28.1d,12.5d,59.3d,87.5d,43.7d,65.6d,40.6d,21.8d,93.7d,75d,31.2d,68.7d,53.1d,71.8d,3.1d,46.8d,6.2d,37.5d,56.2d,25d,18.75d,100d,0d,81.2d,84.3d,62.5d,9.3d,15.6d,50d};
         int [] gosto = {10,2,21,22,80,50,5,11,16,91,91,5,9,83,14,21,15,95,35,70,86,31,90,30,100,1,5,13,85,25,71,23};
         int [] amnesia ={61,76,98,91,83,85,87,26,30,4,4,82,32,58,89,10,90,0,73,55,5,88,5,92,100,1,60,62,43,93,67,80};
-        
-        for(int i = 0; i < 32;i++){
+        int i = 0;
+        iniciarArray();
+        while(i < 32){
             Random gerador = new Random();
-            Bebidas bebida = new Bebidas(1,"a","a",1.0d,1.0d,1.0d,1,1);
+            Bebidas bebida = new Bebidas();
+            bebida.setId(id[i]);
             bebida.setNome(nome[i]);
             bebida.setTeorAlco(teorAlcool[i]);
             bebida.setCustBene(custBene[i]);
             bebida.setGosto(gosto[i]);
             bebida.setAmnesia(amnesia[i]);
-            int numAleatorio = gerador.nextInt()*10;
-            if((numAleatorio >= 0 && numAleatorio < 32) && (deck.get(numAleatorio) == null)){
-                deck.add(numAleatorio,bebida);
+            boolean cartaInserida = false;
+            while(cartaInserida = false){
+              int numAleatorio = gerador.nextInt(32);
+                if(deck.get(numAleatorio) == null){
+                    deck.add(numAleatorio,bebida);
+                    i += 1;
+                    cartaInserida = true;
+                    System.out.println(deck.toString());
+                }
             }
+
+
+           
        }
     } 
      public static void main(String [] args){
-         
+         gerarBebidas();
      }
+     public static void iniciarArray(){
+         for(int i = 0; i < 32; i++){
+             deck.add(i,null);
+         }
+     }
+     
+
+     
+
+    
+
+      
+    
 
     
 }
