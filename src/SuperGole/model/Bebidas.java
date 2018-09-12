@@ -22,6 +22,7 @@ public class Bebidas {
     private int gosto;
     private int Amnesia;
     protected  static ArrayList<Bebidas> deck = new ArrayList<Bebidas>();
+    protected static int [] numerosSorteados = new int[32];
 
     public Bebidas(int id, String nome, String image, double TeorAlco, double preco, double custBene, int gosto, int Amnesia) {
         this.id = id;
@@ -122,6 +123,7 @@ public class Bebidas {
         int [] amnesia ={61,76,98,91,83,85,87,26,30,4,4,82,32,58,89,10,90,0,73,55,5,88,5,92,100,1,60,62,43,93,67,80};
         int i = 0;
         iniciarArray();
+        iniciarVetorNumeros();
         while(i < 32){
             Random gerador = new Random();
             Bebidas bebida = new Bebidas();
@@ -135,12 +137,16 @@ public class Bebidas {
             while(cartaInserida == false){
               int numAleatorio = gerador.nextInt(32);
                 System.out.println("Posição a verificar: " + numAleatorio + "  Conteúdo da posição: " +  deck.get(numAleatorio));
-                if(deck.get(numAleatorio) == null){
+                int achouNumeroIgual = VerificarNumeros(numAleatorio);
+                if(achouNumeroIgual == -1){
                     deck.add(numAleatorio,bebida);
+                    numerosSorteados[i] = numAleatorio;
                     i += 1;
                     cartaInserida = true;
-                    System.out.print("Posição: " + numAleatorio + " ");
+                    System.out.print("Posição Inserida: " + numAleatorio + " ");
                     System.out.println("Nome: " + bebida.getNome()  + " ");
+                    System.out.println("----------------------------");
+                    mostrarNumSorteados();
                 }
             }
 
@@ -154,6 +160,25 @@ public class Bebidas {
      public static void iniciarArray(){
          for(int i = 0; i < 32; i++){
              deck.add(i,null);
+         }
+     }
+     public static void mostrarNumSorteados(){
+         for(int i = 0; i < numerosSorteados.length; i++){
+             System.out.print(" " + numerosSorteados[i] + ",");
+         }
+                      System.out.println();
+     }
+     public static int VerificarNumeros(int numero){
+         for(int i = 0; i < numerosSorteados.length; i++){
+             if(numerosSorteados[i] == numero){
+                 return 1;
+             }
+         }
+         return -1;
+     }
+     public static void iniciarVetorNumeros(){
+         for(int i = 0; i < numerosSorteados.length; i++){
+             numerosSorteados[i] = -1;
          }
      }
      
