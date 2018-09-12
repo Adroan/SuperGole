@@ -134,6 +134,7 @@ public class Bebidas {
             boolean cartaInserida = false;
             while(cartaInserida == false){
               int numAleatorio = gerador.nextInt(32);
+                System.out.println("Posição a verificar: " + numAleatorio + "  Conteúdo da posição: " +  deck.get(numAleatorio));
                 if(deck.get(numAleatorio) == null){
                     deck.add(numAleatorio,bebida);
                     i += 1;
