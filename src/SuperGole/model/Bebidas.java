@@ -140,6 +140,7 @@ public class Bebidas {
                     cartaInserida = true;
                     System.out.println(deck.toString());
                 }
+                System.out.println(numAleatorio);
             }
 
 
