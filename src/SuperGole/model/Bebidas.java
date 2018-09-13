@@ -151,8 +151,6 @@ public class Bebidas {
         for(int j = 0; j < 32; j++){ // adiciona as cartas no LinkedList
             deckFinal.enqueue(deck.get(j));
         }
-         System.out.println("Primeira carta ArrayList:  " + deck.get(0).getNome());
-         System.out.println("Primeira carta LinkedList:  " + deckFinal.first().getNome());
     } 
      public static void main(String [] args){
          gerarBebidas();
