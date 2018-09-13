@@ -46,8 +46,21 @@ public class IniciarJogo {
     }
     
     public static void main(String [] args){
+        MecanicaPC pc = new MecanicaPC();
+        int posicao = 0;
         criarDecks(); // Feito
-        criarMao();
+        criarMao(); // Feito
+        int cartaSelecionada = pc.verificarId(maoPc);
+        for (int i = 0; i < 5; i++) {
+            if(maoPc.get(i).getId() == cartaSelecionada){
+                System.out.println("Melhor carta:  " + maoPc.get(i).getNome() + "  ID:  " + maoPc.get(i).getId() );
+                posicao = i;
+            }else{
+                System.out.println("Carta não escolhida:  " + maoPc.get(i).getNome()  + "  ID:  " + maoPc.get(i).getId() );
+            }
+        }
+        String atributo = pc.verificarAtributo(maoPc.get(posicao));
+        System.out.println("Atributo:  " + atributo);
 
     }
     

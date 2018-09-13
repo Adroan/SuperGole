@@ -113,12 +113,12 @@ public class Bebidas {
     
     public static void gerarBebidas(){
         int [] id ={25,28,22,20,11,27,30,4,10,8,6,31,16,9,26,7,24,5,14,2,13,21,12,15,32,1,19,29,18,17,3,23};
-        String[] nome = {"51","3 pipa","Absinto neto costa","absolut","amarula","Bacardi","carta oro","balakov","brahma",
+        String[] nome = {"51","3 pipa","Absinto neto costa","absolut","amarula","Bacardi Carta Oro","balakov","Brahma",
         "catuaba selvagem","Cerveja Lassberg","Cerveja Saint Bier","corote","dreher","Jurupinga","Natasha","Nova Schin","Rajska","Remy Martin Louis XIII conhaque",
         "Run Captain Morgan","Saquê Junmai","Skol Beats","Smirnoff","Smirnoff ice","Tequila José Cuervo Ouro","Terere Alcoólico","toddynho do mal premium",
         "Tonturinha","Velho barreiro","Vinho Campo Largo Suave","Vodka Cîroc","Whisky Jack Daniels Honey","White horse"};
         Double[] teorAlcool = {39d, 37.5d, 53.5d, 40d, 17d, 38d, 38d, 4.8d, 14d, 4.8d, 5d, 39d, 38d, 10d, 38d, 4.8d, 37d, 40d, 35d, 16d, 7.9d, 37.5d, 5d, 38d, 50d, 4d, 36d, 39d, 10d, 40d, 35d, 40d};
-        Double [] preco = {10d,4.99d,125d,119.9d,79d,39.9d,6.69d,3.5d,13.9d,10d,11d,3d,14.25d,23d,18.9d,6.55d,18d,40041.14d,65d,120d,5.49d,42d,5d,119.9d,9d,42000d,2d,75d,8d,10d,219.9d,199.9d,68.9d};
+        Double [] preco = {10d,4.99d,125d,119.9d,79d,39.9d,6.69d,3.5d,13.9d,10d,11d,3d,14.25d,23d,18.9d,6.55d,18d,40041.14d,65d,120d,5.49d,42d,5d,119.9d,9d,42000d,2.75d,8d,10d,219.9d,199.9d,68.9d};
         Double[] custBene = {78.1d,90.6d,34.3d,28.1d,12.5d,59.3d,87.5d,43.7d,65.6d,40.6d,21.8d,93.7d,75d,31.2d,68.7d,53.1d,71.8d,3.1d,46.8d,6.2d,37.5d,56.2d,25d,18.75d,100d,0d,81.2d,84.3d,62.5d,9.3d,15.6d,50d};
         int [] gosto = {10,2,21,22,80,50,5,11,16,91,91,5,9,83,14,21,15,95,35,70,86,31,90,30,100,1,5,13,85,25,71,23};
         int [] amnesia ={61,76,98,91,83,85,87,26,30,4,4,82,32,58,89,10,90,0,73,55,5,88,5,92,100,1,60,62,43,93,67,80};
