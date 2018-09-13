@@ -127,6 +127,7 @@ public class Bebidas {
         while(i < 32){
             Random gerador = new Random();
             Bebidas bebida = new Bebidas();
+            bebida.setPreco(preco[i]);
             bebida.setId(id[i]);
             bebida.setNome(nome[i]);
             bebida.setTeorAlco(teorAlcool[i]);

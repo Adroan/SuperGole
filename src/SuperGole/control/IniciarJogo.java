@@ -56,10 +56,17 @@ public class IniciarJogo {
                 System.out.println("Melhor carta:  " + maoPc.get(i).getNome() + "  ID:  " + maoPc.get(i).getId() );
                 posicao = i;
             }else{
-                System.out.println("Carta não escolhida:  " + maoPc.get(i).getNome()  + "  ID:  " + maoPc.get(i).getId() );
+                // System.out.println("Carta não escolhida:  " + maoPc.get(i).getNome()  + "  ID:  " + maoPc.get(i).getId() );
             }
         }
         String atributo = pc.verificarAtributo(maoPc.get(posicao));
+        System.out.println("Nome:  " + maoPc.get(posicao).getNome());
+        System.out.println("Preco:  " + maoPc.get(posicao).getPreco() + "    Media: " + pc.getMediaPreco());
+        System.out.println("Gosto:  " + maoPc.get(posicao).getGosto() + "    Media: " + pc.getMediaGosto());
+        System.out.println("Teor:  " + maoPc.get(posicao).getTeorAlco() + "    Media: " + pc.getMediaTeorAlcoolico());
+        System.out.println("Amnesia:  " + maoPc.get(posicao).getAmnesia() + "    Media: " + pc.getMediaAmnesia());
+        System.out.println("CustoBene:  " + maoPc.get(posicao).getCustBene() + "    Media: " + pc.getMediaCustoBeneficio());
+        System.out.println("---------------------");
         System.out.println("Atributo:  " + atributo);
 
     }
