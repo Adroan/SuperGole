@@ -23,8 +23,6 @@ public class Bebidas {
     private int gosto;
     private int Amnesia;
     protected  static ArrayList<Bebidas> deck = new ArrayList<Bebidas>();
-    protected static LinkedQueue<Bebidas> deckFinal = new LinkedQueue();
-    protected static int [] numerosSorteados = new int[32];
 
     public Bebidas(int id, String nome, String image, double TeorAlco, double preco, double custBene, int gosto, int Amnesia) {
         this.id = id;
@@ -109,7 +107,8 @@ public class Bebidas {
     public void setAmnesia(int Amnesia) {
         this.Amnesia = Amnesia;
     }
-    
+
+ 
     
     
     public static void gerarBebidas(){
@@ -148,9 +147,6 @@ public class Bebidas {
            
        }
         mostrarCartas(); // Mostra as cartas inseridas no vetor
-        for(int j = 0; j < 32; j++){ // adiciona as cartas no LinkedList
-            deckFinal.enqueue(deck.get(j));
-        }
     } 
      public static void main(String [] args){
          gerarBebidas();
