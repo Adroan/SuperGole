@@ -7,6 +7,8 @@ package SuperGole.control;
 
 import SuperGole.model.Bebidas;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Random;
 import linear.queue.LinkedQueue;
 
 /**
@@ -26,7 +28,7 @@ public class IniciarJogo {
     
     }
     
-    public static void criarDecks(){
+    public static void criarDecks(){ //  Separa o deck principal ao meio para o usuário e o pc
         Bebidas bebida = new Bebidas();
         bebida.gerarBebidas();
         deck = bebida.getDeck();
@@ -38,12 +40,45 @@ public class IniciarJogo {
             }
         }
     }
-     public static void criarMao() {
+     public static void criarMao() { // Cria as primeiras 5 cartas do usuario e pc
         for(int i = 0; i < 5; i++){
             maoUsuario.add(deckUsuario.dequeue());
             maoPc.add(deckPc.dequeue());
-        }
+        }   
     }
+     public static void updateMaoUsuario(ArrayList<Bebidas> maoUsuario, LinkedQueue<Bebidas> deck){
+         for (int i = 0; i < 5; i++) {
+         if(deck.isEmpty() == false){     
+            maoUsuario.set(i,deck.dequeue());
+         }
+        }
+     }
+     public static void updateMaoPc(ArrayList<Bebidas> maoPc, LinkedQueue<Bebidas> deck){
+         int i = 0;
+         boolean cartaInserida = false;
+         while(cartaInserida = false){
+         if(deck.isEmpty() == false){         
+            maoPc.set(i,deck.dequeue());
+            cartaInserida = true;
+         }
+         i++;
+        }
+     }
+     public static void vitoriaBatalha(LinkedQueue<Bebidas> deck,Bebidas cartaWin, Bebidas cartaLose){
+         deck.enqueue(cartaWin);
+         deck.enqueue(cartaLose);
+     }
+     
+     public static int sorteioInicio(){
+         Random gerador = new Random();
+         int valor = gerador.nextInt(100);
+         if(valor < 50){
+             return 1;
+         }else{
+             return -1;
+         }
+     }
+     
      public static int batalha(Bebidas cartaPC, Bebidas cartaUsu, int atributo){
          switch(atributo){
              case 1:  if(cartaPC.getPreco() > cartaUsu.getPreco()){return -1;}else{return 1;}

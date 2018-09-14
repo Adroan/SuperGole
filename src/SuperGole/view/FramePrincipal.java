@@ -55,6 +55,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         setTitle("SuperGole");
         setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(1000, 917));
+        setPreferredSize(new java.awt.Dimension(1314, 810));
 
         desktopPrincipal.setBackground(new java.awt.Color(0, 0, 255));
 
