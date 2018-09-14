@@ -11,6 +11,7 @@ import SuperGole.view.panels.JpanelDeck;
 import SuperGole.view.panels.jpanelCarta;
 import SuperGole.view.panels.jpanelMao;
 import java.awt.Color;
+import java.net.URL;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -73,7 +74,8 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     }
     
     private static void setCarta(JLabel teor,JLabel preco, JLabel gosto, JLabel amnesia, JLabel custBen,Bebidas carta, JPanel nome, JLabel imagem ){
-        ImageIcon icone = new ImageIcon(carta.getImagem());
+        URL url = Bebidas.class.getResource(carta.getImage());
+        ImageIcon icone = new ImageIcon(url);
         teor.setText(String.valueOf(carta.getTeorAlco()));
         preco.setText(String.valueOf(carta.getPreco()));
         gosto.setText(String.valueOf(carta.getGosto()));
