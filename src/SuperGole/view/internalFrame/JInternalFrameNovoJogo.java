@@ -5,6 +5,10 @@
  */
 package SuperGole.view.internalFrame;
 
+import SuperGole.view.panels.JpanelDeck;
+import SuperGole.view.panels.jpanelCarta;
+import SuperGole.view.panels.jpanelMao;
+
 /**
  *
  * @author Eduardo Woloszyn
@@ -25,8 +29,15 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     
     private JInternalFrameNovoJogo() {
         initComponents();
+        iniciaJogo();
     }
-
+    
+    private void iniciaJogo(){
+       
+        
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -36,14 +47,85 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelMaoUser = new javax.swing.JPanel();
-        jPanelDeckUsuario = new javax.swing.JPanel();
         cartaSelecionadaCpu = new javax.swing.JPanel();
+        pcCartaSelecionada = new javax.swing.JPanel();
+        btnPcSelectTAlcoolico1 = new javax.swing.JButton();
+        jButton64 = new javax.swing.JButton();
+        jButton65 = new javax.swing.JButton();
+        jButton66 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         cartaSelecionadaUsuario = new javax.swing.JPanel();
+        usuarioCartaSelecionada = new javax.swing.JPanel();
+        btnUserSelectTAlcoolico1 = new javax.swing.JButton();
+        jButton61 = new javax.swing.JButton();
+        jButton62 = new javax.swing.JButton();
+        btnUserSelectPreco = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
         panelMaoCpu = new javax.swing.JPanel();
-        jPanelDeckCpu = new javax.swing.JPanel();
+        cartaPc1 = new javax.swing.JPanel();
+        btnPcTAlcoolico1 = new javax.swing.JButton();
+        btnPcPreco1 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        cartaPc2 = new javax.swing.JPanel();
+        btnPcTAlcoolico2 = new javax.swing.JButton();
+        btnPcPreco2 = new javax.swing.JButton();
+        jButton50 = new javax.swing.JButton();
+        jButton51 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        cartaPc3 = new javax.swing.JPanel();
+        btnPcTAlcoolico3 = new javax.swing.JButton();
+        btnPcPreco3 = new javax.swing.JButton();
+        jButton53 = new javax.swing.JButton();
+        jButton54 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        cartaPc4 = new javax.swing.JPanel();
+        btnPcTAlcoolico4 = new javax.swing.JButton();
+        jButton55 = new javax.swing.JButton();
+        jButton56 = new javax.swing.JButton();
+        btnPcPreco4 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        cartaPc5 = new javax.swing.JPanel();
+        btnPcTAlcoolico5 = new javax.swing.JButton();
+        jButton58 = new javax.swing.JButton();
+        jButton59 = new javax.swing.JButton();
+        btnPcPreco5 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jPanelDeckUsuario1 = new javax.swing.JPanel();
+        panelMaoCpu1 = new javax.swing.JPanel();
+        cartaUser1 = new javax.swing.JPanel();
+        btnUserTAlcoolico1 = new javax.swing.JButton();
+        jButton67 = new javax.swing.JButton();
+        jButton68 = new javax.swing.JButton();
+        btnUserPreco1 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        cartaUser2 = new javax.swing.JPanel();
+        btnUserTAlcoolico2 = new javax.swing.JButton();
+        jButton70 = new javax.swing.JButton();
+        jButton71 = new javax.swing.JButton();
+        btnUserPreco2 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        cartaUser3 = new javax.swing.JPanel();
+        btnUserTAlcoolico3 = new javax.swing.JButton();
+        jButton73 = new javax.swing.JButton();
+        jButton74 = new javax.swing.JButton();
+        btnUserPreco3 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        cartaUser4 = new javax.swing.JPanel();
+        btnUserTAlcoolico4 = new javax.swing.JButton();
+        jButton76 = new javax.swing.JButton();
+        jButton77 = new javax.swing.JButton();
+        btnUserPreco4 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        cartaUser5 = new javax.swing.JPanel();
+        btnUserTAlcoolico5 = new javax.swing.JButton();
+        jButton79 = new javax.swing.JButton();
+        jButton80 = new javax.swing.JButton();
+        btnUserPreco5 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jPanelDeckUsuario2 = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(255, 0, 0));
         setClosable(true);
@@ -51,140 +133,715 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         setForeground(java.awt.Color.darkGray);
         setIconifiable(true);
 
-        panelMaoUser.setBorder(javax.swing.BorderFactory.createTitledBorder("Mão"));
-
-        javax.swing.GroupLayout panelMaoUserLayout = new javax.swing.GroupLayout(panelMaoUser);
-        panelMaoUser.setLayout(panelMaoUserLayout);
-        panelMaoUserLayout.setHorizontalGroup(
-            panelMaoUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1028, Short.MAX_VALUE)
-        );
-        panelMaoUserLayout.setVerticalGroup(
-            panelMaoUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-        );
-
-        jPanelDeckUsuario.setBorder(javax.swing.BorderFactory.createTitledBorder("Deck"));
-
-        javax.swing.GroupLayout jPanelDeckUsuarioLayout = new javax.swing.GroupLayout(jPanelDeckUsuario);
-        jPanelDeckUsuario.setLayout(jPanelDeckUsuarioLayout);
-        jPanelDeckUsuarioLayout.setHorizontalGroup(
-            jPanelDeckUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 174, Short.MAX_VALUE)
-        );
-        jPanelDeckUsuarioLayout.setVerticalGroup(
-            jPanelDeckUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
         cartaSelecionadaCpu.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Selected Card", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Eras Light ITC", 1, 12), new java.awt.Color(0, 153, 153))); // NOI18N
+
+        pcCartaSelecionada.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
+
+        btnPcSelectTAlcoolico1.setText("TeorAlcoólico");
+
+        jButton64.setText("Custo Beneficio");
+
+        jButton65.setText("Gosto");
+
+        jButton66.setText("Preço");
+
+        jLabel8.setText("jLabel8");
+
+        javax.swing.GroupLayout pcCartaSelecionadaLayout = new javax.swing.GroupLayout(pcCartaSelecionada);
+        pcCartaSelecionada.setLayout(pcCartaSelecionadaLayout);
+        pcCartaSelecionadaLayout.setHorizontalGroup(
+            pcCartaSelecionadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pcCartaSelecionadaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pcCartaSelecionadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton65, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton64, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPcSelectTAlcoolico1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton66, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(pcCartaSelecionadaLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(jLabel8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pcCartaSelecionadaLayout.setVerticalGroup(
+            pcCartaSelecionadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pcCartaSelecionadaLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addComponent(btnPcSelectTAlcoolico1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton66)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton65)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton64)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout cartaSelecionadaCpuLayout = new javax.swing.GroupLayout(cartaSelecionadaCpu);
         cartaSelecionadaCpu.setLayout(cartaSelecionadaCpuLayout);
         cartaSelecionadaCpuLayout.setHorizontalGroup(
             cartaSelecionadaCpuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 154, Short.MAX_VALUE)
+            .addGroup(cartaSelecionadaCpuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pcCartaSelecionada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         cartaSelecionadaCpuLayout.setVerticalGroup(
             cartaSelecionadaCpuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 214, Short.MAX_VALUE)
+            .addComponent(pcCartaSelecionada, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SuperGole/view/images/VERSUS Graphic50.png"))); // NOI18N
 
         cartaSelecionadaUsuario.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Selected Card", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Eras Light ITC", 1, 12), new java.awt.Color(0, 153, 153))); // NOI18N
 
+        usuarioCartaSelecionada.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
+
+        btnUserSelectTAlcoolico1.setText("TeorAlcoólico");
+
+        jButton61.setText("Custo Beneficio");
+
+        jButton62.setText("Gosto");
+
+        btnUserSelectPreco.setText("Preço");
+
+        jLabel7.setText("jLabel7");
+
+        javax.swing.GroupLayout usuarioCartaSelecionadaLayout = new javax.swing.GroupLayout(usuarioCartaSelecionada);
+        usuarioCartaSelecionada.setLayout(usuarioCartaSelecionadaLayout);
+        usuarioCartaSelecionadaLayout.setHorizontalGroup(
+            usuarioCartaSelecionadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, usuarioCartaSelecionadaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(usuarioCartaSelecionadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton62, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton61, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnUserSelectTAlcoolico1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnUserSelectPreco, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(usuarioCartaSelecionadaLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(jLabel7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        usuarioCartaSelecionadaLayout.setVerticalGroup(
+            usuarioCartaSelecionadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, usuarioCartaSelecionadaLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnUserSelectTAlcoolico1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnUserSelectPreco)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton62)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton61)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout cartaSelecionadaUsuarioLayout = new javax.swing.GroupLayout(cartaSelecionadaUsuario);
         cartaSelecionadaUsuario.setLayout(cartaSelecionadaUsuarioLayout);
         cartaSelecionadaUsuarioLayout.setHorizontalGroup(
             cartaSelecionadaUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 142, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaSelecionadaUsuarioLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(usuarioCartaSelecionada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         cartaSelecionadaUsuarioLayout.setVerticalGroup(
             cartaSelecionadaUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 214, Short.MAX_VALUE)
+            .addGroup(cartaSelecionadaUsuarioLayout.createSequentialGroup()
+                .addComponent(usuarioCartaSelecionada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
+        panelMaoCpu.setBackground(new java.awt.Color(153, 255, 153));
         panelMaoCpu.setBorder(javax.swing.BorderFactory.createTitledBorder("Mão"));
+
+        cartaPc1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
+
+        btnPcTAlcoolico1.setText("TeorAlcoólico");
+
+        btnPcPreco1.setText("Preço");
+
+        jButton19.setText("Gosto");
+
+        jButton20.setText("Custo Beneficio");
+
+        jLabel2.setText("Imagem");
+
+        javax.swing.GroupLayout cartaPc1Layout = new javax.swing.GroupLayout(cartaPc1);
+        cartaPc1.setLayout(cartaPc1Layout);
+        cartaPc1Layout.setHorizontalGroup(
+            cartaPc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cartaPc1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(cartaPc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnPcTAlcoolico1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPcPreco1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaPc1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(52, 52, 52))
+        );
+        cartaPc1Layout.setVerticalGroup(
+            cartaPc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaPc1Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnPcTAlcoolico1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnPcPreco1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton20)
+                .addContainerGap())
+        );
+
+        cartaPc2.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
+
+        btnPcTAlcoolico2.setText("TeorAlcoólico");
+
+        btnPcPreco2.setText("Preço");
+
+        jButton50.setText("Gosto");
+
+        jButton51.setText("Custo Beneficio");
+
+        jLabel3.setText("jLabel3");
+
+        javax.swing.GroupLayout cartaPc2Layout = new javax.swing.GroupLayout(cartaPc2);
+        cartaPc2.setLayout(cartaPc2Layout);
+        cartaPc2Layout.setHorizontalGroup(
+            cartaPc2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cartaPc2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(cartaPc2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnPcTAlcoolico2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPcPreco2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton50, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(cartaPc2Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        cartaPc2Layout.setVerticalGroup(
+            cartaPc2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaPc2Layout.createSequentialGroup()
+                .addContainerGap(45, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(44, 44, 44)
+                .addComponent(btnPcTAlcoolico2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnPcPreco2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton50)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton51)
+                .addContainerGap())
+        );
+
+        cartaPc3.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
+
+        btnPcTAlcoolico3.setText("TeorAlcoólico");
+
+        btnPcPreco3.setText("Preço");
+
+        jButton53.setText("Gosto");
+
+        jButton54.setText("Custo Beneficio");
+
+        jLabel4.setText("jLabel4");
+
+        javax.swing.GroupLayout cartaPc3Layout = new javax.swing.GroupLayout(cartaPc3);
+        cartaPc3.setLayout(cartaPc3Layout);
+        cartaPc3Layout.setHorizontalGroup(
+            cartaPc3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaPc3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(cartaPc3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton53, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton54, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPcTAlcoolico3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPcPreco3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(cartaPc3Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(jLabel4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        cartaPc3Layout.setVerticalGroup(
+            cartaPc3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaPc3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(42, 42, 42)
+                .addComponent(btnPcTAlcoolico3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnPcPreco3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton53)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton54)
+                .addContainerGap())
+        );
+
+        cartaPc4.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
+
+        btnPcTAlcoolico4.setText("TeorAlcoólico");
+
+        jButton55.setText("Custo Beneficio");
+
+        jButton56.setText("Gosto");
+
+        btnPcPreco4.setText("Preço");
+
+        jLabel5.setText("jLabel5");
+
+        javax.swing.GroupLayout cartaPc4Layout = new javax.swing.GroupLayout(cartaPc4);
+        cartaPc4.setLayout(cartaPc4Layout);
+        cartaPc4Layout.setHorizontalGroup(
+            cartaPc4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaPc4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(cartaPc4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPcTAlcoolico4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPcPreco4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(cartaPc4Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        cartaPc4Layout.setVerticalGroup(
+            cartaPc4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaPc4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(44, 44, 44)
+                .addComponent(btnPcTAlcoolico4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnPcPreco4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton56)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton55)
+                .addContainerGap())
+        );
+
+        cartaPc5.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
+
+        btnPcTAlcoolico5.setText("TeorAlcoólico");
+
+        jButton58.setText("Custo Beneficio");
+
+        jButton59.setText("Gosto");
+
+        btnPcPreco5.setText("Preço");
+
+        jLabel6.setText("jLabel6");
+
+        javax.swing.GroupLayout cartaPc5Layout = new javax.swing.GroupLayout(cartaPc5);
+        cartaPc5.setLayout(cartaPc5Layout);
+        cartaPc5Layout.setHorizontalGroup(
+            cartaPc5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaPc5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(cartaPc5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton59, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPcTAlcoolico5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPcPreco5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(cartaPc5Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        cartaPc5Layout.setVerticalGroup(
+            cartaPc5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaPc5Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnPcTAlcoolico5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnPcPreco5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton59)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton58)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout panelMaoCpuLayout = new javax.swing.GroupLayout(panelMaoCpu);
         panelMaoCpu.setLayout(panelMaoCpuLayout);
         panelMaoCpuLayout.setHorizontalGroup(
             panelMaoCpuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1028, Short.MAX_VALUE)
+            .addGroup(panelMaoCpuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(cartaPc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cartaPc2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cartaPc3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cartaPc4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cartaPc5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelMaoCpuLayout.setVerticalGroup(
             panelMaoCpuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(cartaPc1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(cartaPc2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(cartaPc3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(cartaPc4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(cartaPc5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanelDeckCpu.setBorder(javax.swing.BorderFactory.createTitledBorder("Deck"));
+        jPanelDeckUsuario1.setBorder(javax.swing.BorderFactory.createTitledBorder("Deck"));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SuperGole/view/images/fundoCarta.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelDeckCpuLayout = new javax.swing.GroupLayout(jPanelDeckCpu);
-        jPanelDeckCpu.setLayout(jPanelDeckCpuLayout);
-        jPanelDeckCpuLayout.setHorizontalGroup(
-            jPanelDeckCpuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDeckCpuLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(30, 30, 30))
+        javax.swing.GroupLayout jPanelDeckUsuario1Layout = new javax.swing.GroupLayout(jPanelDeckUsuario1);
+        jPanelDeckUsuario1.setLayout(jPanelDeckUsuario1Layout);
+        jPanelDeckUsuario1Layout.setHorizontalGroup(
+            jPanelDeckUsuario1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 154, Short.MAX_VALUE)
         );
-        jPanelDeckCpuLayout.setVerticalGroup(
-            jPanelDeckCpuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelDeckCpuLayout.createSequentialGroup()
-                .addComponent(jLabel3)
+        jPanelDeckUsuario1Layout.setVerticalGroup(
+            jPanelDeckUsuario1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 256, Short.MAX_VALUE)
+        );
+
+        panelMaoCpu1.setBackground(new java.awt.Color(153, 255, 153));
+        panelMaoCpu1.setBorder(javax.swing.BorderFactory.createTitledBorder("Mão"));
+
+        cartaUser1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
+
+        btnUserTAlcoolico1.setText("TeorAlcoólico");
+
+        jButton67.setText("Custo Beneficio");
+
+        jButton68.setText("Gosto");
+
+        btnUserPreco1.setText("Preço");
+
+        jLabel9.setText("jLabel9");
+
+        javax.swing.GroupLayout cartaUser1Layout = new javax.swing.GroupLayout(cartaUser1);
+        cartaUser1.setLayout(cartaUser1Layout);
+        cartaUser1Layout.setHorizontalGroup(
+            cartaUser1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaUser1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(cartaUser1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton68, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton67, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnUserTAlcoolico1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnUserPreco1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(cartaUser1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel9)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        cartaUser1Layout.setVerticalGroup(
+            cartaUser1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaUser1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(btnUserTAlcoolico1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnUserPreco1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton68)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton67)
+                .addContainerGap())
+        );
+
+        cartaUser2.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
+
+        btnUserTAlcoolico2.setText("TeorAlcoólico");
+
+        jButton70.setText("Custo Beneficio");
+
+        jButton71.setText("Gosto");
+
+        btnUserPreco2.setText("Preço");
+
+        jLabel10.setText("jLabel10");
+
+        javax.swing.GroupLayout cartaUser2Layout = new javax.swing.GroupLayout(cartaUser2);
+        cartaUser2.setLayout(cartaUser2Layout);
+        cartaUser2Layout.setHorizontalGroup(
+            cartaUser2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaUser2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(cartaUser2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton71, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton70, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnUserTAlcoolico2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnUserPreco2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(cartaUser2Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jLabel10)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        cartaUser2Layout.setVerticalGroup(
+            cartaUser2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaUser2Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnUserTAlcoolico2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnUserPreco2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton71)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton70)
+                .addContainerGap())
+        );
+
+        cartaUser3.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
+
+        btnUserTAlcoolico3.setText("TeorAlcoólico");
+
+        jButton73.setText("Custo Beneficio");
+
+        jButton74.setText("Gosto");
+
+        btnUserPreco3.setText("Preço");
+
+        jLabel11.setText("jLabel11");
+
+        javax.swing.GroupLayout cartaUser3Layout = new javax.swing.GroupLayout(cartaUser3);
+        cartaUser3.setLayout(cartaUser3Layout);
+        cartaUser3Layout.setHorizontalGroup(
+            cartaUser3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaUser3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(cartaUser3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton74, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton73, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnUserTAlcoolico3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnUserPreco3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(cartaUser3Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel11)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        cartaUser3Layout.setVerticalGroup(
+            cartaUser3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaUser3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnUserTAlcoolico3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnUserPreco3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton74)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton73)
+                .addContainerGap())
+        );
+
+        cartaUser4.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
+
+        btnUserTAlcoolico4.setText("TeorAlcoólico");
+
+        jButton76.setText("Custo Beneficio");
+
+        jButton77.setText("Gosto");
+
+        btnUserPreco4.setText("Preço");
+
+        jLabel12.setText("jLabel12");
+
+        javax.swing.GroupLayout cartaUser4Layout = new javax.swing.GroupLayout(cartaUser4);
+        cartaUser4.setLayout(cartaUser4Layout);
+        cartaUser4Layout.setHorizontalGroup(
+            cartaUser4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaUser4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(cartaUser4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton77, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton76, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnUserTAlcoolico4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnUserPreco4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(cartaUser4Layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(jLabel12)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        cartaUser4Layout.setVerticalGroup(
+            cartaUser4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaUser4Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnUserTAlcoolico4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnUserPreco4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton77)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton76)
+                .addContainerGap())
+        );
+
+        cartaUser5.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
+
+        btnUserTAlcoolico5.setText("TeorAlcoólico");
+
+        jButton79.setText("Custo Beneficio");
+
+        jButton80.setText("Gosto");
+
+        btnUserPreco5.setText("Preço");
+
+        jLabel13.setText("jLabel13");
+
+        javax.swing.GroupLayout cartaUser5Layout = new javax.swing.GroupLayout(cartaUser5);
+        cartaUser5.setLayout(cartaUser5Layout);
+        cartaUser5Layout.setHorizontalGroup(
+            cartaUser5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaUser5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(cartaUser5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton80, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton79, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnUserTAlcoolico5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnUserPreco5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(cartaUser5Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel13)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        cartaUser5Layout.setVerticalGroup(
+            cartaUser5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaUser5Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnUserTAlcoolico5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnUserPreco5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton80)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton79)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout panelMaoCpu1Layout = new javax.swing.GroupLayout(panelMaoCpu1);
+        panelMaoCpu1.setLayout(panelMaoCpu1Layout);
+        panelMaoCpu1Layout.setHorizontalGroup(
+            panelMaoCpu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelMaoCpu1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cartaUser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cartaUser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cartaUser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cartaUser4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cartaUser5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        panelMaoCpu1Layout.setVerticalGroup(
+            panelMaoCpu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(cartaUser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(cartaUser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(cartaUser3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(cartaUser4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(cartaUser5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanelDeckUsuario2.setBorder(javax.swing.BorderFactory.createTitledBorder("Deck"));
+
+        javax.swing.GroupLayout jPanelDeckUsuario2Layout = new javax.swing.GroupLayout(jPanelDeckUsuario2);
+        jPanelDeckUsuario2.setLayout(jPanelDeckUsuario2Layout);
+        jPanelDeckUsuario2Layout.setHorizontalGroup(
+            jPanelDeckUsuario2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 160, Short.MAX_VALUE)
+        );
+        jPanelDeckUsuario2Layout.setVerticalGroup(
+            jPanelDeckUsuario2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
+                        .addGap(244, 244, 244)
                         .addComponent(cartaSelecionadaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
+                        .addGap(31, 31, 31)
                         .addComponent(jLabel1)
-                        .addGap(36, 36, 36)
-                        .addComponent(cartaSelecionadaCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(panelMaoCpu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelMaoUser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanelDeckUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jPanelDeckCpu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(45, 45, 45)
+                        .addComponent(cartaSelecionadaCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(panelMaoCpu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanelDeckUsuario2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(panelMaoCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jPanelDeckUsuario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(panelMaoCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanelDeckUsuario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(128, 128, 128)
+                                .addComponent(jLabel1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(cartaSelecionadaCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(24, 24, 24))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(cartaSelecionadaUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelMaoCpu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelDeckCpu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(82, 82, 82))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(cartaSelecionadaCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cartaSelecionadaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanelDeckUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelMaoUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(70, 70, 70))
+                    .addComponent(jPanelDeckUsuario2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelMaoCpu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -192,13 +849,84 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnPcPreco1;
+    private javax.swing.JButton btnPcPreco2;
+    private javax.swing.JButton btnPcPreco3;
+    private javax.swing.JButton btnPcPreco4;
+    private javax.swing.JButton btnPcPreco5;
+    private javax.swing.JButton btnPcSelectTAlcoolico1;
+    private javax.swing.JButton btnPcTAlcoolico1;
+    private javax.swing.JButton btnPcTAlcoolico2;
+    private javax.swing.JButton btnPcTAlcoolico3;
+    private javax.swing.JButton btnPcTAlcoolico4;
+    private javax.swing.JButton btnPcTAlcoolico5;
+    private javax.swing.JButton btnUserPreco1;
+    private javax.swing.JButton btnUserPreco2;
+    private javax.swing.JButton btnUserPreco3;
+    private javax.swing.JButton btnUserPreco4;
+    private javax.swing.JButton btnUserPreco5;
+    private javax.swing.JButton btnUserSelectPreco;
+    private javax.swing.JButton btnUserSelectTAlcoolico1;
+    private javax.swing.JButton btnUserTAlcoolico1;
+    private javax.swing.JButton btnUserTAlcoolico2;
+    private javax.swing.JButton btnUserTAlcoolico3;
+    private javax.swing.JButton btnUserTAlcoolico4;
+    private javax.swing.JButton btnUserTAlcoolico5;
+    private javax.swing.JPanel cartaPc1;
+    private javax.swing.JPanel cartaPc2;
+    private javax.swing.JPanel cartaPc3;
+    private javax.swing.JPanel cartaPc4;
+    private javax.swing.JPanel cartaPc5;
     private javax.swing.JPanel cartaSelecionadaCpu;
     private javax.swing.JPanel cartaSelecionadaUsuario;
+    private javax.swing.JPanel cartaUser1;
+    private javax.swing.JPanel cartaUser2;
+    private javax.swing.JPanel cartaUser3;
+    private javax.swing.JPanel cartaUser4;
+    private javax.swing.JPanel cartaUser5;
+    private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton50;
+    private javax.swing.JButton jButton51;
+    private javax.swing.JButton jButton53;
+    private javax.swing.JButton jButton54;
+    private javax.swing.JButton jButton55;
+    private javax.swing.JButton jButton56;
+    private javax.swing.JButton jButton58;
+    private javax.swing.JButton jButton59;
+    private javax.swing.JButton jButton61;
+    private javax.swing.JButton jButton62;
+    private javax.swing.JButton jButton64;
+    private javax.swing.JButton jButton65;
+    private javax.swing.JButton jButton66;
+    private javax.swing.JButton jButton67;
+    private javax.swing.JButton jButton68;
+    private javax.swing.JButton jButton70;
+    private javax.swing.JButton jButton71;
+    private javax.swing.JButton jButton73;
+    private javax.swing.JButton jButton74;
+    private javax.swing.JButton jButton76;
+    private javax.swing.JButton jButton77;
+    private javax.swing.JButton jButton79;
+    private javax.swing.JButton jButton80;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanelDeckCpu;
-    private javax.swing.JPanel jPanelDeckUsuario;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanelDeckUsuario1;
+    private javax.swing.JPanel jPanelDeckUsuario2;
     private javax.swing.JPanel panelMaoCpu;
-    private javax.swing.JPanel panelMaoUser;
+    private javax.swing.JPanel panelMaoCpu1;
+    private javax.swing.JPanel pcCartaSelecionada;
+    private javax.swing.JPanel usuarioCartaSelecionada;
     // End of variables declaration//GEN-END:variables
 }

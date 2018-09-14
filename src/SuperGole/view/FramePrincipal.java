@@ -53,6 +53,7 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SuperGole");
+        setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(1000, 917));
 
         desktopPrincipal.setBackground(new java.awt.Color(0, 0, 255));
@@ -61,11 +62,11 @@ public class FramePrincipal extends javax.swing.JFrame {
         desktopPrincipal.setLayout(desktopPrincipalLayout);
         desktopPrincipalLayout.setHorizontalGroup(
             desktopPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 674, Short.MAX_VALUE)
+            .addGap(0, 1161, Short.MAX_VALUE)
         );
         desktopPrincipalLayout.setVerticalGroup(
             desktopPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 507, Short.MAX_VALUE)
+            .addGap(0, 696, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Jogo");
@@ -97,10 +98,11 @@ public class FramePrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPrincipal, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(desktopPrincipal)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
