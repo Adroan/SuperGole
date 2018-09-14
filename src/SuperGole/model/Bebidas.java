@@ -140,7 +140,7 @@ public class Bebidas {
         while(i < 32){
             Random gerador = new Random();
             Bebidas bebida = new Bebidas();
-            bebida.setImagem("");
+            bebida.setImagem(imagens[i]);
             bebida.setPreco(preco[i]);
             bebida.setId(id[i]);
             bebida.setNome(nome[i]);
