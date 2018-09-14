@@ -36,13 +36,13 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelMao = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        sCardPc = new javax.swing.JPanel();
+        panelMaoUser = new javax.swing.JPanel();
+        jPanelDeckUsuario = new javax.swing.JPanel();
+        cartaSelecionadaCpu = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        scardUser = new javax.swing.JPanel();
-        panelMao1 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        cartaSelecionadaUsuario = new javax.swing.JPanel();
+        panelMaoCpu = new javax.swing.JPanel();
+        jPanelDeckCpu = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 0, 0));
@@ -51,89 +51,91 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         setForeground(java.awt.Color.darkGray);
         setIconifiable(true);
 
-        panelMao.setBorder(javax.swing.BorderFactory.createTitledBorder("Mão"));
+        panelMaoUser.setBorder(javax.swing.BorderFactory.createTitledBorder("Mão"));
 
-        javax.swing.GroupLayout panelMaoLayout = new javax.swing.GroupLayout(panelMao);
-        panelMao.setLayout(panelMaoLayout);
-        panelMaoLayout.setHorizontalGroup(
-            panelMaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1001, Short.MAX_VALUE)
+        javax.swing.GroupLayout panelMaoUserLayout = new javax.swing.GroupLayout(panelMaoUser);
+        panelMaoUser.setLayout(panelMaoUserLayout);
+        panelMaoUserLayout.setHorizontalGroup(
+            panelMaoUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1028, Short.MAX_VALUE)
         );
-        panelMaoLayout.setVerticalGroup(
-            panelMaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelMaoUserLayout.setVerticalGroup(
+            panelMaoUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 203, Short.MAX_VALUE)
         );
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Deck"));
+        jPanelDeckUsuario.setBorder(javax.swing.BorderFactory.createTitledBorder("Deck"));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jPanelDeckUsuarioLayout = new javax.swing.GroupLayout(jPanelDeckUsuario);
+        jPanelDeckUsuario.setLayout(jPanelDeckUsuarioLayout);
+        jPanelDeckUsuarioLayout.setHorizontalGroup(
+            jPanelDeckUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 174, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 216, Short.MAX_VALUE)
+        jPanelDeckUsuarioLayout.setVerticalGroup(
+            jPanelDeckUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        sCardPc.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Selected Card", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Eras Light ITC", 1, 12), new java.awt.Color(0, 153, 153))); // NOI18N
+        cartaSelecionadaCpu.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Selected Card", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Eras Light ITC", 1, 12), new java.awt.Color(0, 153, 153))); // NOI18N
 
-        javax.swing.GroupLayout sCardPcLayout = new javax.swing.GroupLayout(sCardPc);
-        sCardPc.setLayout(sCardPcLayout);
-        sCardPcLayout.setHorizontalGroup(
-            sCardPcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout cartaSelecionadaCpuLayout = new javax.swing.GroupLayout(cartaSelecionadaCpu);
+        cartaSelecionadaCpu.setLayout(cartaSelecionadaCpuLayout);
+        cartaSelecionadaCpuLayout.setHorizontalGroup(
+            cartaSelecionadaCpuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 154, Short.MAX_VALUE)
         );
-        sCardPcLayout.setVerticalGroup(
-            sCardPcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        cartaSelecionadaCpuLayout.setVerticalGroup(
+            cartaSelecionadaCpuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 214, Short.MAX_VALUE)
         );
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SuperGole/view/images/VERSUS Graphic50.png"))); // NOI18N
 
-        scardUser.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Selected Card", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Eras Light ITC", 1, 12), new java.awt.Color(0, 153, 153))); // NOI18N
+        cartaSelecionadaUsuario.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Selected Card", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Eras Light ITC", 1, 12), new java.awt.Color(0, 153, 153))); // NOI18N
 
-        javax.swing.GroupLayout scardUserLayout = new javax.swing.GroupLayout(scardUser);
-        scardUser.setLayout(scardUserLayout);
-        scardUserLayout.setHorizontalGroup(
-            scardUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout cartaSelecionadaUsuarioLayout = new javax.swing.GroupLayout(cartaSelecionadaUsuario);
+        cartaSelecionadaUsuario.setLayout(cartaSelecionadaUsuarioLayout);
+        cartaSelecionadaUsuarioLayout.setHorizontalGroup(
+            cartaSelecionadaUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 142, Short.MAX_VALUE)
         );
-        scardUserLayout.setVerticalGroup(
-            scardUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        cartaSelecionadaUsuarioLayout.setVerticalGroup(
+            cartaSelecionadaUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 214, Short.MAX_VALUE)
         );
 
-        panelMao1.setBorder(javax.swing.BorderFactory.createTitledBorder("Mão"));
+        panelMaoCpu.setBorder(javax.swing.BorderFactory.createTitledBorder("Mão"));
 
-        javax.swing.GroupLayout panelMao1Layout = new javax.swing.GroupLayout(panelMao1);
-        panelMao1.setLayout(panelMao1Layout);
-        panelMao1Layout.setHorizontalGroup(
-            panelMao1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelMaoCpuLayout = new javax.swing.GroupLayout(panelMaoCpu);
+        panelMaoCpu.setLayout(panelMaoCpuLayout);
+        panelMaoCpuLayout.setHorizontalGroup(
+            panelMaoCpuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1028, Short.MAX_VALUE)
+        );
+        panelMaoCpuLayout.setVerticalGroup(
+            panelMaoCpuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        panelMao1Layout.setVerticalGroup(
-            panelMao1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Deck"));
+        jPanelDeckCpu.setBorder(javax.swing.BorderFactory.createTitledBorder("Deck"));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SuperGole/view/images/fundoCarta.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelDeckCpuLayout = new javax.swing.GroupLayout(jPanelDeckCpu);
+        jPanelDeckCpu.setLayout(jPanelDeckCpuLayout);
+        jPanelDeckCpuLayout.setHorizontalGroup(
+            jPanelDeckCpuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDeckCpuLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addContainerGap())
+                .addGap(30, 30, 30))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+        jPanelDeckCpuLayout.setVerticalGroup(
+            jPanelDeckCpuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelDeckCpuLayout.createSequentialGroup()
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -143,24 +145,24 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(panelMao1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelMao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(95, 95, 95)
-                        .addComponent(scardUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cartaSelecionadaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(42, 42, 42)
                         .addComponent(jLabel1)
                         .addGap(36, 36, 36)
-                        .addComponent(sCardPc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cartaSelecionadaCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(panelMaoCpu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelMaoUser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanelDeckUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanelDeckCpu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -168,26 +170,21 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelMao1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 56, Short.MAX_VALUE)))
+                    .addComponent(panelMaoCpu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelDeckCpu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(82, 82, 82))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(sCardPc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(scardUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panelMao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(228, 228, 228)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(82, 82, 82))
+                        .addComponent(jLabel1)
+                        .addGap(82, 82, 82))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(cartaSelecionadaCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cartaSelecionadaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanelDeckUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelMaoUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(70, 70, 70))
         );
 
         pack();
@@ -195,13 +192,13 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel cartaSelecionadaCpu;
+    private javax.swing.JPanel cartaSelecionadaUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel panelMao;
-    private javax.swing.JPanel panelMao1;
-    private javax.swing.JPanel sCardPc;
-    private javax.swing.JPanel scardUser;
+    private javax.swing.JPanel jPanelDeckCpu;
+    private javax.swing.JPanel jPanelDeckUsuario;
+    private javax.swing.JPanel panelMaoCpu;
+    private javax.swing.JPanel panelMaoUser;
     // End of variables declaration//GEN-END:variables
 }
