@@ -12,6 +12,7 @@ import SuperGole.view.panels.jpanelCarta;
 import SuperGole.view.panels.jpanelMao;
 import java.util.ArrayList;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import linear.queue.LinkedQueue;
 
 /**
@@ -55,15 +56,16 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     }
     
     private static void mostrarMao(ArrayList<Bebidas> maoUsuario){
-        setCarta(Teor1,Preco1,Gosto1,Amnesia1,CustoBen1,maoUsuario.get(0));
+        setCarta(Teor1,Preco1,Gosto1,Amnesia1,CustoBen1,maoUsuario.get(0),nomeCarta1);
     }
     
-    private static void setCarta(JLabel teor,JLabel preco, JLabel gosto, JLabel amnesia, JLabel custBen,Bebidas carta ){
+    private static void setCarta(JLabel teor,JLabel preco, JLabel gosto, JLabel amnesia, JLabel custBen,Bebidas carta, JPanel nome ){
         teor.setText(String.valueOf(carta.getTeorAlco()));
         preco.setText(String.valueOf(carta.getPreco()));
         gosto.setText(String.valueOf(carta.getGosto()));
         amnesia.setText(String.valueOf(carta.getAmnesia()));
         custBen.setText(String.valueOf(carta.getCustBene()));
+        nome.setName(carta.getNome());
     }
     
     
@@ -152,7 +154,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         jLabel33 = new javax.swing.JLabel();
         jPanelDeckUsuario1 = new javax.swing.JPanel();
         panelMaoCpu1 = new javax.swing.JPanel();
-        cartaUser1 = new javax.swing.JPanel();
+        nomeCarta1 = new javax.swing.JPanel();
         btnUserTAlcoolico1 = new javax.swing.JButton();
         btnUserCusto1 = new javax.swing.JButton();
         btnUserGosto1 = new javax.swing.JButton();
@@ -211,6 +213,10 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
         setForeground(java.awt.Color.darkGray);
         setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        setMaximumSize(new java.awt.Dimension(1920, 1080));
+        setPreferredSize(new java.awt.Dimension(1020, 868));
 
         cartaSelecionadaCpu.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Selected Card", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Eras Light ITC", 1, 12), new java.awt.Color(0, 153, 153))); // NOI18N
 
@@ -514,7 +520,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         cartaPc2Layout.setVerticalGroup(
             cartaPc2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cartaPc2Layout.createSequentialGroup()
-                .addContainerGap(66, Short.MAX_VALUE)
+                .addContainerGap(26, Short.MAX_VALUE)
                 .addComponent(imgPc2)
                 .addGap(64, 64, 64)
                 .addGroup(cartaPc2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -785,7 +791,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         panelMaoCpu1.setBackground(new java.awt.Color(153, 255, 153));
         panelMaoCpu1.setBorder(javax.swing.BorderFactory.createTitledBorder("Mão"));
 
-        cartaUser1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
+        nomeCarta1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
 
         btnUserTAlcoolico1.setText("TeorAlcoólico");
 
@@ -809,23 +815,23 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         Amnesia1.setText("ata");
 
-        javax.swing.GroupLayout cartaUser1Layout = new javax.swing.GroupLayout(cartaUser1);
-        cartaUser1.setLayout(cartaUser1Layout);
-        cartaUser1Layout.setHorizontalGroup(
-            cartaUser1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cartaUser1Layout.createSequentialGroup()
+        javax.swing.GroupLayout nomeCarta1Layout = new javax.swing.GroupLayout(nomeCarta1);
+        nomeCarta1.setLayout(nomeCarta1Layout);
+        nomeCarta1Layout.setHorizontalGroup(
+            nomeCarta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(nomeCarta1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(cartaUser1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(nomeCarta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnUserCusto1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
                     .addComponent(btnUserGosto1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnUserPreco1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnUserTAlcoolico1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                    .addGroup(cartaUser1Layout.createSequentialGroup()
+                    .addGroup(nomeCarta1Layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addComponent(imgUser1))
                     .addComponent(btnUserGosto6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                .addGroup(cartaUser1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(nomeCarta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(CustoBen1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(Teor1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(Preco1, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -833,29 +839,29 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                     .addComponent(Amnesia1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
-        cartaUser1Layout.setVerticalGroup(
-            cartaUser1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cartaUser1Layout.createSequentialGroup()
+        nomeCarta1Layout.setVerticalGroup(
+            nomeCarta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(nomeCarta1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(imgUser1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                .addGroup(cartaUser1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(nomeCarta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnUserTAlcoolico1)
                     .addComponent(Teor1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cartaUser1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(nomeCarta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnUserPreco1)
                     .addComponent(Preco1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cartaUser1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(nomeCarta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnUserGosto1)
                     .addComponent(Gosto1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cartaUser1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(nomeCarta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnUserGosto6)
                     .addComponent(Amnesia1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cartaUser1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(nomeCarta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnUserCusto1)
                     .addComponent(CustoBen1)))
         );
@@ -1130,7 +1136,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
             panelMaoCpu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelMaoCpu1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(cartaUser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nomeCarta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cartaUser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1142,7 +1148,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         );
         panelMaoCpu1Layout.setVerticalGroup(
             panelMaoCpu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(cartaUser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(nomeCarta1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(cartaUser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(cartaUser3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(cartaUser4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1159,7 +1165,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         );
         jPanelDeckUsuario2Layout.setVerticalGroup(
             jPanelDeckUsuario2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 254, Short.MAX_VALUE)
+            .addGap(0, 170, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1171,9 +1177,9 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(244, 244, 244)
                         .addComponent(cartaSelecionadaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
+                        .addGap(32, 32, 32)
                         .addComponent(jLabel1)
-                        .addGap(45, 45, 45)
+                        .addGap(40, 40, 40)
                         .addComponent(cartaSelecionadaCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
@@ -1185,29 +1191,30 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                             .addComponent(panelMaoCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jPanelDeckUsuario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanelDeckUsuario1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelMaoCpu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(panelMaoCpu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelDeckUsuario1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(cartaSelecionadaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(128, 128, 128)
-                        .addComponent(jLabel1))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cartaSelecionadaCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cartaSelecionadaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(cartaSelecionadaCpu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(9, 9, 9)
+                        .addGap(127, 127, 127)
+                        .addComponent(jLabel1)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelDeckUsuario2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelMaoCpu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(jPanelDeckUsuario2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(panelMaoCpu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -1278,7 +1285,6 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     private javax.swing.JPanel cartaPc5;
     private javax.swing.JPanel cartaSelecionadaCpu;
     private javax.swing.JPanel cartaSelecionadaUsuario;
-    private javax.swing.JPanel cartaUser1;
     private javax.swing.JPanel cartaUser2;
     private javax.swing.JPanel cartaUser3;
     private javax.swing.JPanel cartaUser4;
@@ -1345,6 +1351,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanelDeckUsuario1;
     private javax.swing.JPanel jPanelDeckUsuario2;
     private javax.swing.JLabel lblTeorPc1;
+    private static javax.swing.JPanel nomeCarta1;
     private javax.swing.JPanel panelMaoCpu;
     private javax.swing.JPanel panelMaoCpu1;
     private javax.swing.JPanel pcCartaSelecionada;
