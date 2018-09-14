@@ -49,19 +49,19 @@
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="cartaSelecionadaCpu" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="panelMaoCpu1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jPanelDeckUsuario2" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <Component id="panelMaoCpu" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jPanelDeckUsuario1" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="panelMaoCpu1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jPanelDeckUsuario2" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="24" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -75,9 +75,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="cartaSelecionadaCpu" min="-2" max="-2" attributes="0"/>
-                          <Component id="cartaSelecionadaUsuario" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="cartaSelecionadaCpu" max="32767" attributes="0"/>
+                          <Component id="cartaSelecionadaUsuario" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -85,15 +85,10 @@
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                      <Component id="jPanelDeckUsuario2" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="panelMaoCpu1" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="jPanelDeckUsuario2" max="32767" attributes="0"/>
+                  <Component id="panelMaoCpu1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -125,7 +120,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="pcCartaSelecionada" alignment="1" max="32767" attributes="0"/>
+              <Component id="pcCartaSelecionada" min="-2" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -183,7 +178,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Component id="imgPcSelect" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="49" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnPcSelectTAlcoolico1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -289,7 +284,10 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="usuarioCartaSelecionada" alignment="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="usuarioCartaSelecionada" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -336,7 +334,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Component id="imgUserSelect" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="53" max="32767" attributes="0"/>
+                      <EmptySpace pref="23" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnUserSelectTAlcoolico1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1103,7 +1101,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="nomeCarta1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="nomeCarta2" min="-2" max="-2" attributes="0"/>
@@ -1113,7 +1111,6 @@
                   <Component id="nomeCarta4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="nomeCarta5" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1150,16 +1147,16 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="UsarCarta1" max="32767" attributes="0"/>
+                          <Component id="UsarCarta1" pref="182" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="bCustBen1" pref="0" max="32767" attributes="0"/>
-                                  <Component id="bGosto1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="bGosto1" alignment="0" pref="77" max="32767" attributes="0"/>
                                   <Component id="bPreco1" alignment="0" max="32767" attributes="0"/>
                                   <Component id="bTeor1" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="bAmnesia1" pref="77" max="32767" attributes="0"/>
+                                  <Component id="bAmnesia1" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="87" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="CustoBen1" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="Teor1" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -1208,7 +1205,7 @@
                           <Component id="bCustBen1" min="-2" max="-2" attributes="0"/>
                           <Component id="CustoBen1" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="47" max="32767" attributes="0"/>
                       <Component id="UsarCarta1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1332,16 +1329,16 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="UsarCarta3" alignment="0" max="32767" attributes="0"/>
+                          <Component id="UsarCarta3" alignment="0" pref="150" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="btnUserCusto2" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="btnUserGosto2" alignment="0" pref="77" max="32767" attributes="0"/>
                                   <Component id="btnUserPreco2" alignment="0" max="32767" attributes="0"/>
                                   <Component id="btnUserTAlcoolico2" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto15" alignment="0" pref="77" max="32767" attributes="0"/>
+                                  <Component id="btnUserGosto15" alignment="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="55" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="CustoBen3" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="Teor3" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -1499,16 +1496,16 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="UsarCarta2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="UsarCarta2" alignment="0" pref="150" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="btnUserCusto3" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="btnUserGosto3" alignment="0" pref="77" max="32767" attributes="0"/>
                                   <Component id="btnUserPreco3" alignment="0" max="32767" attributes="0"/>
                                   <Component id="btnUserTAlcoolico3" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto16" alignment="0" pref="77" max="32767" attributes="0"/>
+                                  <Component id="btnUserGosto16" alignment="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="55" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="CustoBen2" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="Teor2" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -1666,16 +1663,16 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="UsarCarta4" alignment="0" max="32767" attributes="0"/>
+                          <Component id="UsarCarta4" alignment="0" pref="154" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="btnUserCusto4" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto4" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="btnUserGosto4" alignment="0" pref="77" max="32767" attributes="0"/>
                                   <Component id="btnUserPreco4" alignment="0" max="32767" attributes="0"/>
                                   <Component id="btnUserTAlcoolico4" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto17" alignment="0" pref="77" max="32767" attributes="0"/>
+                                  <Component id="btnUserGosto17" alignment="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="59" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="CustoBen4" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="Teor4" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -1833,16 +1830,16 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="UsarCarta5" alignment="0" max="32767" attributes="0"/>
+                          <Component id="UsarCarta5" alignment="0" pref="150" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="btnUserCusto5" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto5" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="btnUserGosto5" alignment="0" pref="77" max="32767" attributes="0"/>
                                   <Component id="btnUserPreco5" alignment="0" max="32767" attributes="0"/>
                                   <Component id="btnUserTAlcoolico5" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto18" alignment="0" pref="77" max="32767" attributes="0"/>
+                                  <Component id="btnUserGosto18" alignment="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="55" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="CustoBen5" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="Teor5" alignment="1" min="-2" max="-2" attributes="0"/>
