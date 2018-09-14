@@ -54,7 +54,6 @@ public class FramePrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SuperGole");
         setMinimumSize(new java.awt.Dimension(1000, 917));
-        setPreferredSize(new java.awt.Dimension(1314, 810));
 
         desktopPrincipal.setBackground(new java.awt.Color(0, 0, 255));
 

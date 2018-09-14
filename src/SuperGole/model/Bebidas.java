@@ -15,6 +15,7 @@ import linear.queue.LinkedQueue;
  */
 public class Bebidas {
     private int id;
+    private String imagem;
     private String nome;
     private String image;
     private double TeorAlco;
@@ -51,6 +52,15 @@ public class Bebidas {
     public void setId(int id) {
         this.id = id;
     }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
+    
 
     public String getNome() {
         return nome;
@@ -122,11 +132,13 @@ public class Bebidas {
         Double[] custBene = {78.1d,90.6d,34.3d,28.1d,12.5d,59.3d,87.5d,43.7d,65.6d,40.6d,21.8d,93.7d,75d,31.2d,68.7d,53.1d,71.8d,3.1d,46.8d,6.2d,37.5d,56.2d,25d,18.75d,100d,0d,81.2d,84.3d,62.5d,9.3d,15.6d,50d};
         int [] gosto = {10,2,21,22,80,50,5,11,16,91,91,5,9,83,14,21,15,95,35,70,86,31,90,30,100,1,5,13,85,25,71,23};
         int [] amnesia ={61,76,98,91,83,85,87,26,30,4,4,82,32,58,89,10,90,0,73,55,5,88,5,92,100,1,60,62,43,93,67,80};
+        String [] imagens = {"SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png","SuperGole/imagens/bebidas/.png"};
         int i = 0;
         iniciarArray(); // Seta todas as posições do vetor como null
         while(i < 32){
             Random gerador = new Random();
             Bebidas bebida = new Bebidas();
+            bebida.setImagem("");
             bebida.setPreco(preco[i]);
             bebida.setId(id[i]);
             bebida.setNome(nome[i]);
