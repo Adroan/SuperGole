@@ -461,6 +461,10 @@
               </Border>
             </Property>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Nome_Carta2"/>
+            <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
 
           <Layout>
             <DimensionLayout dim="0">
@@ -493,8 +497,8 @@
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                              <Component id="imgpc1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                              <Component id="ImagemCarta1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="20" max="32767" attributes="0"/>
@@ -504,8 +508,8 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                      <Component id="imgpc1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                      <Component id="ImagemCarta1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnPcTAlcoolico1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -555,11 +559,6 @@
                 <Property name="text" type="java.lang.String" value="Custo Beneficio"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="imgpc1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Imagem"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel14">
               <Properties>
                 <Property name="text" type="java.lang.String" value="ata"/>
@@ -582,6 +581,14 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="ata"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="ImagemCarta1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel2"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
@@ -1126,6 +1133,10 @@
               </Border>
             </Property>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Nome_Carta2"/>
+            <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
           </AuxValues>
@@ -1142,7 +1153,7 @@
                           <Component id="btnUserTAlcoolico1" alignment="0" pref="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="imgUser1" min="-2" max="-2" attributes="0"/>
+                              <Component id="ImagemCarta" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="btnUserGosto6" max="32767" attributes="0"/>
                       </Group>
@@ -1162,7 +1173,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="imgUser1" min="-2" max="-2" attributes="0"/>
+                      <Component id="ImagemCarta" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnUserTAlcoolico1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1213,10 +1224,13 @@
                 <Property name="text" type="java.lang.String" value="Pre&#xe7;o"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="imgUser1">
+            <Component class="javax.swing.JLabel" name="ImagemCarta">
               <Properties>
-                <Property name="text" type="java.lang.String" value="IMAGEM"/>
+                <Property name="text" type="java.lang.String" value="sfsdfsdf"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="Teor1">
               <Properties>
