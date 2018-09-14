@@ -216,6 +216,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
         setMaximumSize(new java.awt.Dimension(1920, 1080));
+        setName(""); // NOI18N
         setPreferredSize(new java.awt.Dimension(1020, 868));
 
         cartaSelecionadaCpu.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Selected Card", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Eras Light ITC", 1, 12), new java.awt.Color(0, 153, 153))); // NOI18N
@@ -1135,7 +1136,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         panelMaoCpu1Layout.setHorizontalGroup(
             panelMaoCpu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelMaoCpu1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(nomeCarta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cartaUser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1143,7 +1144,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                 .addComponent(cartaUser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cartaUser4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(cartaUser5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         panelMaoCpu1Layout.setVerticalGroup(
@@ -1165,7 +1166,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         );
         jPanelDeckUsuario2Layout.setVerticalGroup(
             jPanelDeckUsuario2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 170, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
