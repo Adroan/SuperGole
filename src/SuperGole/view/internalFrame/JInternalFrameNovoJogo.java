@@ -71,10 +71,10 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     
     private void mecanicaJogo(){
         if((maoPc.get(0) == null) && (maoPc.get(1) == null) && (maoPc.get(1) == null) && (maoPc.get(3) == null) && (maoPc.get(4) == null)){
-            JOptionPane.showMessageDialog(null,"Computador Venceu!!!");
+            TextoVencedor.setText("Você venceu o jogo!!! ");
         }
         if((maoUsuario.get(0) == null) && (maoUsuario.get(1) == null) && (maoUsuario.get(1) == null) && (maoUsuario.get(3) == null) && (maoUsuario.get(4) == null)){
-            JOptionPane.showMessageDialog(null,"Jogador Venceu!!!");
+            TextoVencedor.setText("O computador venceu o jogo!!! ");
         }
         QtdDeckPc.setText(""+deckPc.size());
         QtdDeckUsu.setText(""+deckUsuario.size());
@@ -98,19 +98,16 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     
     private static void setCarta(JLabel teor,JLabel preco, JLabel gosto, JLabel amnesia, JLabel custBen,Bebidas carta, JPanel nome){
         if(carta == null){
-            teor.setText("0");
-            preco.setText("0");
-            gosto.setText("0");
-            amnesia.setText("0");
-            custBen.setText("0");
-            nome.setBorder(javax.swing.BorderFactory.createTitledBorder("Vazio!"));
-        }
+            nome.setVisible(false);
+        }else{
         teor.setText(String.valueOf(carta.getTeorAlco()));
         preco.setText(String.valueOf(carta.getPreco()));
         gosto.setText(String.valueOf(carta.getGosto()));
         amnesia.setText(String.valueOf(carta.getAmnesia()));
         custBen.setText(String.valueOf(carta.getCustBene()));
         nome.setBorder(javax.swing.BorderFactory.createTitledBorder(carta.getNome()));
+        nome.setVisible(true);
+        }
     }
     
     private static void MostrarBotaoAtributo(){
