@@ -15,6 +15,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import linear.queue.LinkedQueue;
 
@@ -43,6 +44,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     public JInternalFrameNovoJogo() {
         initComponents();
         iniciaJogo();
+        mecanicaJogo();
     }
     
     private void iniciaJogo(){
@@ -53,16 +55,23 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
        deckUsuario = jogo.getDeckUsuario();
        maoPc = jogo.getMaoPc();
        maoUsuario = jogo.getMaoUsuario();
-       int turno = jogo.sorteioInicio();
-       preencherMaoTela(maoUsuario);
-       while(maoPc.isEmpty() == false || maoUsuario.isEmpty() == false){
-           if(turno == 1){ // Vez do jogador
-               MostrarBotaoAtributo();
-           }else if(turno == -1){ // Vez do pc
-               EsconderBotaoAtributo();
-           }
-       }
-        
+       preencherMaoTela(maoUsuario);        
+    }
+    
+    private void mecanicaJogo(){
+       IniciarJogo jogo = new IniciarJogo();
+        int turno = jogo.sorteioInicio();
+        while(maoPc.isEmpty() == false || maoUsuario.isEmpty() == false){
+            if(turno == 1){
+                MostrarBotaoAtributo();
+                turno= -1;
+                JOptionPane.showMessageDialog(rootPane, "oi");
+            }else if(turno == -1){
+                EsconderBotaoAtributo();
+                turno = 1;
+               JOptionPane.showMessageDialog(rootPane, "se fudeu");
+            }
+        }
     }
     
     private static void preencherMaoTela(ArrayList<Bebidas> maoUsuario){
@@ -74,8 +83,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     }
     
     private static void setCarta(JLabel teor,JLabel preco, JLabel gosto, JLabel amnesia, JLabel custBen,Bebidas carta, JPanel nome, JLabel imagem ){
-        URL url = Bebidas.class.getResource(carta.getImage());
-        ImageIcon icone = new ImageIcon(url);
+        ImageIcon icone = new ImageIcon(carta.getImagem());
         teor.setText(String.valueOf(carta.getTeorAlco()));
         preco.setText(String.valueOf(carta.getPreco()));
         gosto.setText(String.valueOf(carta.getGosto()));
