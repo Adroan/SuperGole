@@ -70,6 +70,12 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     }
     
     private void mecanicaJogo(){
+        if((maoPc.get(0) == null) && (maoPc.get(1) == null) && (maoPc.get(1) == null) && (maoPc.get(3) == null) && (maoPc.get(4) == null)){
+            JOptionPane.showMessageDialog(null,"Computador Venceu!!!");
+        }
+        if((maoUsuario.get(0) == null) && (maoUsuario.get(1) == null) && (maoUsuario.get(1) == null) && (maoUsuario.get(3) == null) && (maoUsuario.get(4) == null)){
+            JOptionPane.showMessageDialog(null,"Jogador Venceu!!!");
+        }
         QtdDeckPc.setText(""+deckPc.size());
         QtdDeckUsu.setText(""+deckUsuario.size());
         if(turno == 0){
@@ -903,12 +909,32 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta3.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
 
         bTeor3.setText("TeorAlcoólico");
+        bTeor3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bTeor3ActionPerformed(evt);
+            }
+        });
 
         bCustBen3.setText("Custo Beneficio");
+        bCustBen3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCustBen3ActionPerformed(evt);
+            }
+        });
 
         bGosto3.setText("Gosto");
+        bGosto3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bGosto3ActionPerformed(evt);
+            }
+        });
 
         bPreco3.setText("Preço");
+        bPreco3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPreco3ActionPerformed(evt);
+            }
+        });
 
         ImagemCarta3.setText("sfsdfsdf");
 
@@ -921,6 +947,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         CustoBen3.setText("ata");
 
         bAmnesia3.setText("Amnesia");
+        bAmnesia3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAmnesia3ActionPerformed(evt);
+            }
+        });
 
         Amnesia3.setText("ata");
 
@@ -992,12 +1023,32 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta2.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
 
         bTeor2.setText("TeorAlcoólico");
+        bTeor2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bTeor2ActionPerformed(evt);
+            }
+        });
 
         bCustBen2.setText("Custo Beneficio");
+        bCustBen2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCustBen2ActionPerformed(evt);
+            }
+        });
 
         bGosto2.setText("Gosto");
+        bGosto2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bGosto2ActionPerformed(evt);
+            }
+        });
 
         bPreco2.setText("Preço");
+        bPreco2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPreco2ActionPerformed(evt);
+            }
+        });
 
         ImagemCarta2.setText("sfsdfsdf");
 
@@ -1010,6 +1061,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         CustoBen2.setText("ata");
 
         bAmnesia2.setText("Amnesia");
+        bAmnesia2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAmnesia2ActionPerformed(evt);
+            }
+        });
 
         Amnesia2.setText("ata");
 
@@ -1081,12 +1137,32 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta4.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
 
         bTeor4.setText("TeorAlcoólico");
+        bTeor4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bTeor4ActionPerformed(evt);
+            }
+        });
 
         bCustBen4.setText("Custo Beneficio");
+        bCustBen4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCustBen4ActionPerformed(evt);
+            }
+        });
 
         bGosto4.setText("Gosto");
+        bGosto4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bGosto4ActionPerformed(evt);
+            }
+        });
 
         bPreco4.setText("Preço");
+        bPreco4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPreco4ActionPerformed(evt);
+            }
+        });
 
         ImagemCarta4.setText("sfsdfsdf");
 
@@ -1099,6 +1175,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         CustoBen4.setText("ata");
 
         bAmnesia4.setText("Amnesia");
+        bAmnesia4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAmnesia4ActionPerformed(evt);
+            }
+        });
 
         Amnesia4.setText("ata");
 
@@ -1170,12 +1251,32 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta5.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
 
         bTeor5.setText("TeorAlcoólico");
+        bTeor5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bTeor5ActionPerformed(evt);
+            }
+        });
 
         bCustBen5.setText("Custo Beneficio");
+        bCustBen5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCustBen5ActionPerformed(evt);
+            }
+        });
 
         bGosto5.setText("Gosto");
+        bGosto5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bGosto5ActionPerformed(evt);
+            }
+        });
 
         bPreco5.setText("Preço");
+        bPreco5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPreco5ActionPerformed(evt);
+            }
+        });
 
         ImagemCarta5.setText("sfsdfsdf");
 
@@ -1188,6 +1289,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         CustoBen5.setText("ata");
 
         bAmnesia5.setText("Amnesia");
+        bAmnesia5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAmnesia5ActionPerformed(evt);
+            }
+        });
 
         Amnesia5.setText("ata");
 
@@ -1588,8 +1694,18 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
     private void bTeor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTeor1ActionPerformed
         enviarBebidaBatalhaUsuario(maoUsuario.get(0),3);
-        maoUsuario.set(0,deckUsuario.dequeue());
-        maoPc.set(posicaoPc,deckPc.dequeue());
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(0,null);
+        }else{
+            maoUsuario.set(0,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
         turno = 0;
     }//GEN-LAST:event_bTeor1ActionPerformed
 
@@ -1597,8 +1713,16 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(0));
-        maoUsuario.set(0,deckUsuario.dequeue());
-        maoPc.set(posicaoPc,deckPc.dequeue());
+        if(deckUsuario.isEmpty()  == true){
+            maoUsuario.set(0,null);
+        }else{
+            maoUsuario.set(0,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty() == true){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
         turno = 1;
     }//GEN-LAST:event_mouseClickedUsarCarta1
 
@@ -1624,29 +1748,69 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
     private void bPreco1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPreco1ActionPerformed
         enviarBebidaBatalhaUsuario(maoUsuario.get(0),1);
-        maoUsuario.set(0, deckUsuario.dequeue());
-        maoPc.set(posicaoPc,deckPc.dequeue());
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(0,null);
+        }else{
+            maoUsuario.set(0,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
         turno = 0;
     }//GEN-LAST:event_bPreco1ActionPerformed
 
     private void bGosto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGosto1ActionPerformed
         enviarBebidaBatalhaUsuario(maoUsuario.get(0),2);
-        maoUsuario.set(0, deckUsuario.dequeue());
-        maoPc.set(posicaoPc,deckPc.dequeue());
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(0,null);
+        }else{
+            maoUsuario.set(0,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
         turno = 0;
     }//GEN-LAST:event_bGosto1ActionPerformed
 
     private void bAmnesia1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAmnesia1ActionPerformed
         enviarBebidaBatalhaUsuario(maoUsuario.get(0),4);
-        maoUsuario.set(0,  deckUsuario.dequeue());
-        maoPc.set(posicaoPc,deckPc.dequeue());
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(0,null);
+        }else{
+            maoUsuario.set(0,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
         turno = 0;
     }//GEN-LAST:event_bAmnesia1ActionPerformed
 
     private void bCustBen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCustBen1ActionPerformed
         enviarBebidaBatalhaUsuario(maoUsuario.get(0),5);
-        maoUsuario.set(0,  deckUsuario.dequeue());
-        maoPc.set(posicaoPc,deckPc.dequeue());
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(0,null);
+        }else{
+            maoUsuario.set(0,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
         turno = 0;
     }//GEN-LAST:event_bCustBen1ActionPerformed
 
@@ -1654,8 +1818,16 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(1));
-        maoUsuario.set(1,deckUsuario.dequeue());
-        maoPc.set(posicaoPc,deckPc.dequeue());
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(1,null);
+        }else{
+            maoUsuario.set(1,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
         turno = 1;
     }//GEN-LAST:event_UsarCarta2ActionPerformed
 
@@ -1663,8 +1835,16 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(2));
-        maoUsuario.set(2,deckUsuario.dequeue());
-        maoPc.set(posicaoPc,deckPc.dequeue());
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(2,null);
+        }else{
+            maoUsuario.set(2,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
         turno = 1;
     }//GEN-LAST:event_UsarCarta3ActionPerformed
 
@@ -1672,8 +1852,16 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(3));
-        maoUsuario.set(3,deckUsuario.dequeue());
-        maoPc.set(posicaoPc,deckPc.dequeue());
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(3,null);
+        }else{
+            maoUsuario.set(3,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
         turno = 1;
     }//GEN-LAST:event_UsarCarta4ActionPerformed
 
@@ -1681,10 +1869,358 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(4));
-        maoUsuario.set(4,deckUsuario.dequeue());
-        maoPc.set(posicaoPc,deckPc.dequeue());
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(4,null);
+        }else{
+            maoUsuario.set(4,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
         turno = 1;
     }//GEN-LAST:event_UsarCarta5ActionPerformed
+
+    private void bTeor2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTeor2ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(1),3);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(1,null);
+        }else{
+            maoUsuario.set(1,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bTeor2ActionPerformed
+
+    private void bTeor3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTeor3ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(2),3);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(2,null);
+        }else{
+            maoUsuario.set(2,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bTeor3ActionPerformed
+
+    private void bTeor4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTeor4ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(3),3);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(3,null);
+        }else{
+            maoUsuario.set(3,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bTeor4ActionPerformed
+
+    private void bTeor5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTeor5ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(4),3);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(4,null);
+        }else{
+            maoUsuario.set(4,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bTeor5ActionPerformed
+
+    private void bPreco2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPreco2ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(1),1);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(1,null);
+        }else{
+            maoUsuario.set(1,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bPreco2ActionPerformed
+
+    private void bPreco3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPreco3ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(2),1);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(2,null);
+        }else{
+            maoUsuario.set(2,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bPreco3ActionPerformed
+
+    private void bPreco4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPreco4ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(3),1);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(3,null);
+        }else{
+            maoUsuario.set(3,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bPreco4ActionPerformed
+
+    private void bPreco5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPreco5ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(4),1);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(4,null);
+        }else{
+            maoUsuario.set(4,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bPreco5ActionPerformed
+
+    private void bGosto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGosto2ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(1),2);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(1,null);
+        }else{
+            maoUsuario.set(1,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bGosto2ActionPerformed
+
+    private void bGosto3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGosto3ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(2),2);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(2,null);
+        }else{
+            maoUsuario.set(2,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bGosto3ActionPerformed
+
+    private void bGosto4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGosto4ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(3),2);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(3,null);
+        }else{
+            maoUsuario.set(3,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bGosto4ActionPerformed
+
+    private void bGosto5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGosto5ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(4),2);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(4,null);
+        }else{
+            maoUsuario.set(4,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bGosto5ActionPerformed
+
+    private void bAmnesia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAmnesia2ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(1),4);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(1,null);
+        }else{
+            maoUsuario.set(1,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bAmnesia2ActionPerformed
+
+    private void bAmnesia3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAmnesia3ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(2),4);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(2,null);
+        }else{
+            maoUsuario.set(2,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bAmnesia3ActionPerformed
+
+    private void bAmnesia4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAmnesia4ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(3),4);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(3,null);
+        }else{
+            maoUsuario.set(3,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bAmnesia4ActionPerformed
+
+    private void bAmnesia5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAmnesia5ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(4),4);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(4,null);
+        }else{
+            maoUsuario.set(4,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bAmnesia5ActionPerformed
+
+    private void bCustBen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCustBen2ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(1),5);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(1,null);
+        }else{
+            maoUsuario.set(1,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bCustBen2ActionPerformed
+
+    private void bCustBen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCustBen3ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(2),5);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(2,null);
+        }else{
+            maoUsuario.set(2,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bCustBen3ActionPerformed
+
+    private void bCustBen4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCustBen4ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(3),5);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(3,null);
+        }else{
+            maoUsuario.set(3,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bCustBen4ActionPerformed
+
+    private void bCustBen5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCustBen5ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(4),5);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        if(deckUsuario.isEmpty()){
+            maoUsuario.set(4,null);
+        }else{
+            maoUsuario.set(4,deckUsuario.dequeue());
+        }
+        if(deckPc.isEmpty()){
+            maoPc.set(posicaoPc,null);
+        }else{
+            maoPc.set(posicaoPc,deckPc.dequeue());
+        }
+        turno = 0;
+    }//GEN-LAST:event_bCustBen5ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
