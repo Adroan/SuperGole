@@ -26,13 +26,15 @@ public class MecanicaPC {
     
     
     
-    public static int verificarId(ArrayList<Bebidas> mao){
+    public static Bebidas verificarId(ArrayList<Bebidas> mao){
+        Bebidas carta = new Bebidas();
         for (int i = 0; i < 5; i++) {
             if(mao.get(i).getId() > maiorId){
                 maiorId = mao.get(i).getId();
+                carta = mao.get(i);
             }
         }
-        return maiorId;
+        return carta;
     }
 
     public ArrayList<Bebidas> getMaoPc() {
@@ -64,29 +66,29 @@ public class MecanicaPC {
     }
 
     
-    public static String verificarAtributo(Bebidas carta){
+    public static int  verificarAtributo(Bebidas carta){
         double maiorDiferenca = 0;
-        String atributoSelecionado = "";
+        int atributoSelecionado = 0;
         
         if((carta.getPreco() < mediaPreco) && ((mediaPreco - carta.getPreco()) > maiorDiferenca )){
             maiorDiferenca = mediaPreco - carta.getPreco();
-            atributoSelecionado = "Preco";
+            atributoSelecionado = 1;
         }
         if((carta.getGosto() > mediaGosto) && ((carta.getGosto() - mediaGosto) > maiorDiferenca)){
             maiorDiferenca = carta.getGosto() - mediaGosto;
-            atributoSelecionado = "Gosto";
+            atributoSelecionado = 2;
         }
         if((carta.getTeorAlco() > mediaTeorAlcoolico) && ((carta.getTeorAlco() - mediaTeorAlcoolico) > maiorDiferenca)){
             maiorDiferenca = carta.getTeorAlco() - mediaTeorAlcoolico;
-            atributoSelecionado = "TeorAlcoolico";
+            atributoSelecionado = 3;
         }
         if((carta.getAmnesia()> mediaAmnesia) && (carta.getAmnesia()- mediaAmnesia) > maiorDiferenca){
             maiorDiferenca = carta.getAmnesia()- mediaAmnesia;
-            atributoSelecionado = "Amnesia";
+            atributoSelecionado = 4;
         }
         if((carta.getCustBene()> mediaCustoBeneficio) && (carta.getCustBene()- mediaCustoBeneficio) > maiorDiferenca){
             maiorDiferenca = carta.getCustBene()- mediaCustoBeneficio;
-            atributoSelecionado = "CustoBeneficio";
+            atributoSelecionado = 5;
         }
         return atributoSelecionado;
     }

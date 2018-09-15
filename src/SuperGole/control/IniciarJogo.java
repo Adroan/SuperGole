@@ -47,17 +47,21 @@ public class IniciarJogo {
         }   
     }
      public static void updateMaoUsuario(ArrayList<Bebidas> maoUsuario, LinkedQueue<Bebidas> deck){
-         for (int i = 0; i < 5; i++) {
-         if(deck.isEmpty() == false){     
-            maoUsuario.set(i,deck.dequeue());
+         int i = 0;
+         boolean cartaInserida = false;
+         while(cartaInserida = false){
+            if(maoUsuario.get(i) == null){     
+                maoUsuario.set(i,deck.dequeue());
+                cartaInserida = true;
          }
+            i++;
         }
      }
      public static void updateMaoPc(ArrayList<Bebidas> maoPc, LinkedQueue<Bebidas> deck){
          int i = 0;
          boolean cartaInserida = false;
          while(cartaInserida = false){
-         if(deck.isEmpty() == false){         
+         if(maoPc.get(i) == null){         
             maoPc.set(i,deck.dequeue());
             cartaInserida = true;
          }
@@ -68,16 +72,7 @@ public class IniciarJogo {
          deck.enqueue(cartaWin);
          deck.enqueue(cartaLose);
      }
-     
-     public static int sorteioInicio(){
-         Random gerador = new Random();
-         int valor = gerador.nextInt(100);
-         if(valor < 50){
-             return 1;
-         }else{
-             return -1;
-         }
-     }
+ 
      
      public static int batalha(Bebidas cartaPC, Bebidas cartaUsu, int atributo){
          switch(atributo){
@@ -96,16 +91,11 @@ public class IniciarJogo {
         int posicao = 0;
         criarDecks(); // Feito
         criarMao(); // Feito
-        int cartaSelecionada = pc.verificarId(maoPc);
-        for (int i = 0; i < 5; i++) {
-            if(maoPc.get(i).getId() == cartaSelecionada){
-                System.out.println("Melhor carta:  " + maoPc.get(i).getNome() + "  ID:  " + maoPc.get(i).getId() );
-                posicao = i;
-            }else{
-                // System.out.println("Carta não escolhida:  " + maoPc.get(i).getNome()  + "  ID:  " + maoPc.get(i).getId() );
-            }
-        }
-        String atributo = pc.verificarAtributo(maoPc.get(posicao));
+        Bebidas cartaSelecionada = pc.verificarId(maoPc);
+        
+                System.out.println("Melhor carta:  " + cartaSelecionada);
+           
+ 
         System.out.println("Nome:  " + maoPc.get(posicao).getNome());
         System.out.println("Preco:  " + maoPc.get(posicao).getPreco() + "    Media: " + pc.getMediaPreco());
         System.out.println("Gosto:  " + maoPc.get(posicao).getGosto() + "    Media: " + pc.getMediaGosto());
@@ -113,7 +103,7 @@ public class IniciarJogo {
         System.out.println("Amnesia:  " + maoPc.get(posicao).getAmnesia() + "    Media: " + pc.getMediaAmnesia());
         System.out.println("CustoBene:  " + maoPc.get(posicao).getCustBene() + "    Media: " + pc.getMediaCustoBeneficio());
         System.out.println("---------------------");
-        System.out.println("Atributo:  " + atributo);
+    
 
     }
 
