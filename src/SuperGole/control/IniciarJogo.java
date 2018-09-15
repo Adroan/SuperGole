@@ -47,7 +47,7 @@ public class IniciarJogo {
         }   
     }
      
-     public static void updateMaoPc(ArrayList<Bebidas> maoPc, LinkedQueue<Bebidas> deck){
+     public static void updateMaoPc(ArrayList<Bebidas> maoPc, LinkedQueue<Bebidas> deck){ // Arrumar
          int i = 0;
          boolean cartaInserida = false;
          while(cartaInserida = false){

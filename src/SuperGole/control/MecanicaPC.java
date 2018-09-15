@@ -83,11 +83,11 @@ public class MecanicaPC {
             maiorDiferenca = carta.getTeorAlco() - mediaTeorAlcoolico;
             atributoSelecionado = 3;
         }
-        if((carta.getAmnesia()> mediaAmnesia) && (carta.getAmnesia()- mediaAmnesia) > maiorDiferenca){
+        if((carta.getAmnesia()> mediaAmnesia) && ((carta.getAmnesia()- mediaAmnesia) > maiorDiferenca)){
             maiorDiferenca = carta.getAmnesia()- mediaAmnesia;
             atributoSelecionado = 4;
         }
-        if((carta.getCustBene()> mediaCustoBeneficio) && (carta.getCustBene()- mediaCustoBeneficio) > maiorDiferenca){
+        if((carta.getCustBene()> mediaCustoBeneficio) && ((carta.getCustBene()- mediaCustoBeneficio) > maiorDiferenca)){
             maiorDiferenca = carta.getCustBene()- mediaCustoBeneficio;
             atributoSelecionado = 5;
         }
