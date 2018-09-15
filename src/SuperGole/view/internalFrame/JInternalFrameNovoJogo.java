@@ -97,6 +97,14 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     }
     
     private static void setCarta(JLabel teor,JLabel preco, JLabel gosto, JLabel amnesia, JLabel custBen,Bebidas carta, JPanel nome){
+        if(carta == null){
+            teor.setText("0");
+            preco.setText("0");
+            gosto.setText("0");
+            amnesia.setText("0");
+            custBen.setText("0");
+            nome.setBorder(javax.swing.BorderFactory.createTitledBorder("Vazio!"));
+        }
         teor.setText(String.valueOf(carta.getTeorAlco()));
         preco.setText(String.valueOf(carta.getPreco()));
         gosto.setText(String.valueOf(carta.getGosto()));
