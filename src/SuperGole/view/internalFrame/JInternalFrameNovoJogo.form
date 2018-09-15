@@ -941,7 +941,7 @@
                           <Component id="bCustBen1" min="-2" max="-2" attributes="0"/>
                           <Component id="CustoBen1" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="13" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="UsarCarta1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1328,7 +1328,7 @@
                           <Component id="bCustBen2" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="CustoBen2" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="13" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="UsarCarta2" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>

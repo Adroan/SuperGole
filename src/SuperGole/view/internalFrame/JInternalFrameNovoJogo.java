@@ -1586,7 +1586,6 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta6.setVisible(false);
         nomeCarta7.setVisible(false);
         TextoVencedor.setText("");
-        maoPc.set(posicaoPc, deckPc.dequeue());
         panelMaoJogador.setVisible(true);
         BotaoContinuar.setEnabled(false);
         preencherMaoTela(maoUsuario);
