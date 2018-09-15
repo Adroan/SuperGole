@@ -153,10 +153,13 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
             TextoVencedor.setText("Jogador Venceu!!!");
             BotaoContinuar.setEnabled(true);
             jogo.vitoriaBatalha(deckUsuario,cartaUsuario,maoPc.get(posicaoPc));
-        }else{
+        }else if(vencedor == 1){
             TextoVencedor.setText("Computador Venceu!!!");
             BotaoContinuar.setEnabled(true);
             jogo.vitoriaBatalha(deckPc,maoPc.get(posicaoPc),cartaUsuario);
+        }else{
+            TextoVencedor.setText("Empate!!!");
+            BotaoContinuar.setEnabled(true);
         }
         
         
@@ -182,10 +185,13 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
             TextoVencedor.setText("Jogador Venceu!!!");
             BotaoContinuar.setEnabled(true);
             jogo.vitoriaBatalha(deckUsuario,cartaUsuario,maoPc.get(posicaoPc));
-        }else{
+        }else  if(vencedor == 1){
             TextoVencedor.setText("Computador Venceu!!!");
             BotaoContinuar.setEnabled(true);
             jogo.vitoriaBatalha(deckPc,maoPc.get(posicaoPc),cartaUsuario);
+        }else{
+            TextoVencedor.setText("Empate!!!");
+            BotaoContinuar.setEnabled(true);
         }
         
         
