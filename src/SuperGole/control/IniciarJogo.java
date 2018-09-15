@@ -46,17 +46,7 @@ public class IniciarJogo {
             maoPc.add(deckPc.dequeue());
         }   
     }
-     public static void updateMaoUsuario(ArrayList<Bebidas> maoUsuario, LinkedQueue<Bebidas> deck){
-         int i = 0;
-         boolean cartaInserida = false;
-         while(cartaInserida = false){
-            if(maoUsuario.get(i) == null){     
-                maoUsuario.set(i,deck.dequeue());
-                cartaInserida = true;
-         }
-            i++;
-        }
-     }
+     
      public static void updateMaoPc(ArrayList<Bebidas> maoPc, LinkedQueue<Bebidas> deck){
          int i = 0;
          boolean cartaInserida = false;

@@ -35,6 +35,7 @@ public class MecanicaPC {
             }
         }
         return carta;
+
     }
 
     public ArrayList<Bebidas> getMaoPc() {

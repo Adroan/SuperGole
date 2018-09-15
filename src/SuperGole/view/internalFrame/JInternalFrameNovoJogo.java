@@ -35,6 +35,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     protected static LinkedQueue<Bebidas> deckUsuario = new LinkedQueue<Bebidas>();
     protected static int turno;
     protected static IniciarJogo jogo = new IniciarJogo();
+    protected static int posicaoPc;
     /**
      * Creates new form JInternalFrameNovoJogo
      * @return 
@@ -62,11 +63,15 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
        preencherMaoTela(maoUsuario);
        Random gerador = new Random();
        turno = gerador.nextInt(2);
-       mecanicaJogo(turno);
+       nomeCarta6.setVisible(false);
+       nomeCarta7.setVisible(false);
+       mecanicaJogo();
     }
     
-    private void mecanicaJogo(int turno1){
-        if(turno1 == 0){
+    private void mecanicaJogo(){
+        QtdDeckPc.setText(""+deckPc.size());
+        QtdDeckUsu.setText(""+deckUsuario.size());
+        if(turno == 0){
             MostrarBotaoAtributo();
             turno = 1;
         }else{
@@ -77,22 +82,20 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     }
     
     private static void preencherMaoTela(ArrayList<Bebidas> maoUsuario){
-        setCarta(Teor1,Preco1,Gosto1,Amnesia1,CustoBen1,maoUsuario.get(0),nomeCarta1,ImagemCarta);
-        setCarta(Teor2,Preco2,Gosto2,Amnesia2,CustoBen2,maoUsuario.get(1),nomeCarta2,ImagemCarta2);
-        setCarta(Teor3,Preco3,Gosto3,Amnesia3,CustoBen3,maoUsuario.get(2),nomeCarta3,ImagemCarta3);
-        setCarta(Teor4,Preco4,Gosto4,Amnesia4,CustoBen4,maoUsuario.get(3),nomeCarta4,ImagemCarta4);
-        setCarta(Teor5,Preco5,Gosto5,Amnesia5,CustoBen5,maoUsuario.get(4),nomeCarta5,ImagemCarta5);
+        setCarta(Teor1,Preco1,Gosto1,Amnesia1,CustoBen1,maoUsuario.get(0),nomeCarta1);
+        setCarta(Teor2,Preco2,Gosto2,Amnesia2,CustoBen2,maoUsuario.get(1),nomeCarta2);
+        setCarta(Teor3,Preco3,Gosto3,Amnesia3,CustoBen3,maoUsuario.get(2),nomeCarta3);
+        setCarta(Teor4,Preco4,Gosto4,Amnesia4,CustoBen4,maoUsuario.get(3),nomeCarta4);
+        setCarta(Teor5,Preco5,Gosto5,Amnesia5,CustoBen5,maoUsuario.get(4),nomeCarta5);
     }
     
-    private static void setCarta(JLabel teor,JLabel preco, JLabel gosto, JLabel amnesia, JLabel custBen,Bebidas carta, JPanel nome, JLabel imagem ){
-        ImageIcon icone = new ImageIcon(carta.getImagem());
+    private static void setCarta(JLabel teor,JLabel preco, JLabel gosto, JLabel amnesia, JLabel custBen,Bebidas carta, JPanel nome){
         teor.setText(String.valueOf(carta.getTeorAlco()));
         preco.setText(String.valueOf(carta.getPreco()));
         gosto.setText(String.valueOf(carta.getGosto()));
         amnesia.setText(String.valueOf(carta.getAmnesia()));
         custBen.setText(String.valueOf(carta.getCustBene()));
         nome.setBorder(javax.swing.BorderFactory.createTitledBorder(carta.getNome()));
-        imagem.setIcon(icone);
     }
     
     private static void MostrarBotaoAtributo(){
@@ -116,13 +119,49 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         MecanicaPC pc = new MecanicaPC();
         Bebidas cartaPc = new Bebidas();
         cartaPc = pc.verificarId(maoPc);
+        int i = 0;
+        while(i < 5) {
+            if(cartaPc.equals(maoPc.get(i))){
+                posicaoPc = i;
+            }
+            i++;
+        }
         int atributo = pc.verificarAtributo(cartaPc);
         int vencedor = jogo.batalha(cartaPc, cartaUsuario, atributo);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
         panelMaoJogador.setVisible(false);
-        setCarta(Teor6,Preco6,Gosto6,Amnesia6,CustoBen6,cartaUsuario,nomeCarta6,ImagemCarta6);
-        setCarta(Teor7,Preco7,Gosto7,Amnesia7,CustoBen7,cartaPc,nomeCarta7,ImagemCarta7);
+        setCarta(Teor6,Preco6,Gosto6,Amnesia6,CustoBen6,cartaUsuario,nomeCarta6);
+        setCarta(Teor7,Preco7,Gosto7,Amnesia7,CustoBen7,cartaPc,nomeCarta7);
+        if(vencedor == -1){
+            TextoVencedor.setText("Jogador Venceu!!!");
+            BotaoContinuar.setEnabled(true);
+            jogo.vitoriaBatalha(deckUsuario,cartaUsuario,cartaPc);
+        }else{
+            TextoVencedor.setText("Computador Venceu!!!");
+            BotaoContinuar.setEnabled(true);
+            jogo.vitoriaBatalha(deckPc,cartaPc,cartaUsuario);
+        }
+        
+        
+    }
+    private static void enviarBebidaBatalhaUsuario(Bebidas cartaUsuario, int atributo){
+        MecanicaPC pc = new MecanicaPC();
+        Bebidas cartaPc = new Bebidas();
+        cartaPc = pc.verificarId(maoPc);
+        int i = 0;
+        while(i < 5) {
+            if(cartaPc.equals(maoPc.get(i))){
+                posicaoPc = i;
+            }
+            i++;
+        }
+        int vencedor = jogo.batalha(cartaPc, cartaUsuario, atributo);
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        panelMaoJogador.setVisible(false);
+        setCarta(Teor6,Preco6,Gosto6,Amnesia6,CustoBen6,cartaUsuario,nomeCarta6);
+        setCarta(Teor7,Preco7,Gosto7,Amnesia7,CustoBen7,cartaPc,nomeCarta7);
         if(vencedor == -1){
             TextoVencedor.setText("Jogador Venceu!!!");
             BotaoContinuar.setEnabled(true);
@@ -196,6 +235,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jPanelDeckUsuario1 = new javax.swing.JPanel();
+        QtdDeckPc = new javax.swing.JLabel();
         panelMaoJogador = new javax.swing.JPanel();
         nomeCarta1 = new javax.swing.JPanel();
         bTeor1 = new javax.swing.JButton();
@@ -263,6 +303,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         Amnesia5 = new javax.swing.JLabel();
         UsarCarta5 = new javax.swing.JButton();
         jPanelDeckUsuario2 = new javax.swing.JPanel();
+        QtdDeckUsu = new javax.swing.JLabel();
         nomeCarta6 = new javax.swing.JPanel();
         bTeor6 = new javax.swing.JButton();
         bCustBen6 = new javax.swing.JButton();
@@ -699,15 +740,24 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         jPanelDeckUsuario1.setBorder(javax.swing.BorderFactory.createTitledBorder("Deck"));
 
+        QtdDeckPc.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        QtdDeckPc.setText("jLabel2");
+
         javax.swing.GroupLayout jPanelDeckUsuario1Layout = new javax.swing.GroupLayout(jPanelDeckUsuario1);
         jPanelDeckUsuario1.setLayout(jPanelDeckUsuario1Layout);
         jPanelDeckUsuario1Layout.setHorizontalGroup(
             jPanelDeckUsuario1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 154, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDeckUsuario1Layout.createSequentialGroup()
+                .addContainerGap(21, Short.MAX_VALUE)
+                .addComponent(QtdDeckPc)
+                .addGap(19, 19, 19))
         );
         jPanelDeckUsuario1Layout.setVerticalGroup(
             jPanelDeckUsuario1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanelDeckUsuario1Layout.createSequentialGroup()
+                .addGap(93, 93, 93)
+                .addComponent(QtdDeckPc)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelMaoJogador.setBackground(new java.awt.Color(153, 255, 153));
@@ -728,10 +778,25 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         });
 
         bCustBen1.setText("Custo Beneficio");
+        bCustBen1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCustBen1ActionPerformed(evt);
+            }
+        });
 
         bGosto1.setText("Gosto");
+        bGosto1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bGosto1ActionPerformed(evt);
+            }
+        });
 
         bPreco1.setText("Preço");
+        bPreco1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPreco1ActionPerformed(evt);
+            }
+        });
 
         ImagemCarta.setText("sfsdfsdf");
 
@@ -744,6 +809,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         CustoBen1.setText("ata");
 
         bAmnesia1.setText("Amnesia");
+        bAmnesia1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAmnesia1ActionPerformed(evt);
+            }
+        });
 
         Amnesia1.setText("ata");
 
@@ -843,6 +913,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         UsarCarta3.setText("Usar Carta");
         UsarCarta3.setToolTipText("");
+        UsarCarta3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsarCarta3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout nomeCarta3Layout = new javax.swing.GroupLayout(nomeCarta3);
         nomeCarta3.setLayout(nomeCarta3Layout);
@@ -927,6 +1002,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         UsarCarta2.setText("Usar Carta");
         UsarCarta2.setToolTipText("");
+        UsarCarta2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsarCarta2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout nomeCarta2Layout = new javax.swing.GroupLayout(nomeCarta2);
         nomeCarta2.setLayout(nomeCarta2Layout);
@@ -1011,6 +1091,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         UsarCarta4.setText("Usar Carta");
         UsarCarta4.setToolTipText("");
+        UsarCarta4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsarCarta4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout nomeCarta4Layout = new javax.swing.GroupLayout(nomeCarta4);
         nomeCarta4.setLayout(nomeCarta4Layout);
@@ -1095,6 +1180,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         UsarCarta5.setText("Usar Carta");
         UsarCarta5.setToolTipText("");
+        UsarCarta5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsarCarta5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout nomeCarta5Layout = new javax.swing.GroupLayout(nomeCarta5);
         nomeCarta5.setLayout(nomeCarta5Layout);
@@ -1150,7 +1240,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                     .addComponent(bCustBen5)
                     .addComponent(CustoBen5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(UsarCarta5))
+                .addComponent(UsarCarta5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout panelMaoJogadorLayout = new javax.swing.GroupLayout(panelMaoJogador);
@@ -1183,15 +1273,24 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         jPanelDeckUsuario2.setBorder(javax.swing.BorderFactory.createTitledBorder("Deck"));
 
+        QtdDeckUsu.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        QtdDeckUsu.setText("jLabel2");
+
         javax.swing.GroupLayout jPanelDeckUsuario2Layout = new javax.swing.GroupLayout(jPanelDeckUsuario2);
         jPanelDeckUsuario2.setLayout(jPanelDeckUsuario2Layout);
         jPanelDeckUsuario2Layout.setHorizontalGroup(
             jPanelDeckUsuario2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 160, Short.MAX_VALUE)
+            .addGroup(jPanelDeckUsuario2Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(QtdDeckUsu)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanelDeckUsuario2Layout.setVerticalGroup(
             jPanelDeckUsuario2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanelDeckUsuario2Layout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addComponent(QtdDeckUsu)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         nomeCarta6.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
@@ -1468,28 +1567,104 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_bTeor1MouseClicked
 
     private void bTeor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTeor1ActionPerformed
-        System.out.println(evt.toString());
+        enviarBebidaBatalhaUsuario(maoUsuario.get(0),3);
+        maoUsuario.set(0,deckUsuario.dequeue());
+        maoPc.set(posicaoPc,deckPc.dequeue());
+        turno = 0;
     }//GEN-LAST:event_bTeor1ActionPerformed
 
     private void mouseClickedUsarCarta1(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseClickedUsarCarta1
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(0));
-        maoUsuario.set(0,null);
+        maoUsuario.set(0,deckUsuario.dequeue());
+        maoPc.set(posicaoPc,deckPc.dequeue());
+        turno = 1;
     }//GEN-LAST:event_mouseClickedUsarCarta1
 
     private void BotaoContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoContinuarActionPerformed
         nomeCarta6.setVisible(false);
         nomeCarta7.setVisible(false);
-        jogo.updateMaoPc(maoPc,deckPc);
-        jogo.updateMaoUsuario(maoUsuario,deckUsuario);
+        TextoVencedor.setText("");
+        maoPc.set(posicaoPc, deckPc.dequeue());
         panelMaoJogador.setVisible(true);
         BotaoContinuar.setEnabled(false);
         preencherMaoTela(maoUsuario);
-        mecanicaJogo(turno);
+        if(turno == 1){
+            turno = 0;
+        }else{
+            turno = 1;
+        }
+        mecanicaJogo();
     }//GEN-LAST:event_BotaoContinuarActionPerformed
 
     private void UsarCarta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsarCarta1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_UsarCarta1ActionPerformed
+
+    private void bPreco1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPreco1ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(0),1);
+        maoUsuario.set(0, deckUsuario.dequeue());
+        maoPc.set(posicaoPc,deckPc.dequeue());
+        turno = 0;
+    }//GEN-LAST:event_bPreco1ActionPerformed
+
+    private void bGosto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGosto1ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(0),2);
+        maoUsuario.set(0, deckUsuario.dequeue());
+        maoPc.set(posicaoPc,deckPc.dequeue());
+        turno = 0;
+    }//GEN-LAST:event_bGosto1ActionPerformed
+
+    private void bAmnesia1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAmnesia1ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(0),4);
+        maoUsuario.set(0,  deckUsuario.dequeue());
+        maoPc.set(posicaoPc,deckPc.dequeue());
+        turno = 0;
+    }//GEN-LAST:event_bAmnesia1ActionPerformed
+
+    private void bCustBen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCustBen1ActionPerformed
+        enviarBebidaBatalhaUsuario(maoUsuario.get(0),5);
+        maoUsuario.set(0,  deckUsuario.dequeue());
+        maoPc.set(posicaoPc,deckPc.dequeue());
+        turno = 0;
+    }//GEN-LAST:event_bCustBen1ActionPerformed
+
+    private void UsarCarta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsarCarta2ActionPerformed
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        enviarBebidaBatalha(maoUsuario.get(1));
+        maoUsuario.set(1,deckUsuario.dequeue());
+        maoPc.set(posicaoPc,deckPc.dequeue());
+        turno = 1;
+    }//GEN-LAST:event_UsarCarta2ActionPerformed
+
+    private void UsarCarta3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsarCarta3ActionPerformed
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        enviarBebidaBatalha(maoUsuario.get(2));
+        maoUsuario.set(2,deckUsuario.dequeue());
+        maoPc.set(posicaoPc,deckPc.dequeue());
+        turno = 1;
+    }//GEN-LAST:event_UsarCarta3ActionPerformed
+
+    private void UsarCarta4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsarCarta4ActionPerformed
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        enviarBebidaBatalha(maoUsuario.get(3));
+        maoUsuario.set(3,deckUsuario.dequeue());
+        maoPc.set(posicaoPc,deckPc.dequeue());
+        turno = 1;
+    }//GEN-LAST:event_UsarCarta4ActionPerformed
+
+    private void UsarCarta5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsarCarta5ActionPerformed
+        nomeCarta6.setVisible(true);
+        nomeCarta7.setVisible(true);
+        enviarBebidaBatalha(maoUsuario.get(4));
+        maoUsuario.set(4,deckUsuario.dequeue());
+        maoPc.set(posicaoPc,deckPc.dequeue());
+        turno = 1;
+    }//GEN-LAST:event_UsarCarta5ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1530,6 +1705,8 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     private static javax.swing.JLabel Preco5;
     private static javax.swing.JLabel Preco6;
     private static javax.swing.JLabel Preco7;
+    private static javax.swing.JLabel QtdDeckPc;
+    private static javax.swing.JLabel QtdDeckUsu;
     private static javax.swing.JLabel Teor1;
     private static javax.swing.JLabel Teor2;
     private static javax.swing.JLabel Teor3;
