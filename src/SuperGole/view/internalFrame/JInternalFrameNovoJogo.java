@@ -59,7 +59,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
            if(turno == 1){ // Vez do jogador
                MostrarBotaoAtributo();
            }else if(turno == -1){ // Vez do pc
-               
+               EsconderBotaoAtributo();
            }
        }
         
@@ -92,6 +92,14 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         bAmnesia1.setEnabled(true); bAmnesia2.setEnabled(true); bAmnesia3.setEnabled(true); bAmnesia4.setEnabled(true); bAmnesia5.setEnabled(true);
         bCustBen1.setEnabled(true); bCustBen2.setEnabled(true); bCustBen3.setEnabled(true); bCustBen4.setEnabled(true); bCustBen5.setEnabled(true);
         UsarCarta1.setVisible(false); UsarCarta2.setVisible(false); UsarCarta3.setVisible(false); UsarCarta4.setVisible(false); UsarCarta5.setVisible(false);
+    }
+    private static void EsconderBotaoAtributo(){
+        bTeor1.setEnabled(false); bTeor2.setEnabled(false); bTeor3.setEnabled(false); bTeor4.setEnabled(false); bTeor5.setEnabled(false);
+        bPreco1.setEnabled(false); bPreco2.setEnabled(false); bPreco3.setEnabled(false); bPreco4.setEnabled(false); bPreco5.setEnabled(false);
+        bGosto1.setEnabled(false); bGosto2.setEnabled(false); bGosto3.setEnabled(false); bGosto4.setEnabled(false); bGosto5.setEnabled(false);
+        bAmnesia1.setEnabled(false); bAmnesia2.setEnabled(false); bAmnesia3.setEnabled(false); bAmnesia4.setEnabled(false); bAmnesia5.setEnabled(false);
+        bCustBen1.setEnabled(false); bCustBen2.setEnabled(false); bCustBen3.setEnabled(false); bCustBen4.setEnabled(false); bCustBen5.setEnabled(false);
+        UsarCarta1.setVisible(true); UsarCarta2.setVisible(true); UsarCarta3.setVisible(true); UsarCarta4.setVisible(true); UsarCarta5.setVisible(true);
     }
     
     
