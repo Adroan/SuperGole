@@ -107,15 +107,12 @@ public class FramePrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        try{
-        JInternalFrameNovoJogo frame = JInternalFrameNovoJogo.getInstance();
+        JInternalFrameNovoJogo frame = new JInternalFrameNovoJogo() ;
         desktopPrincipal.add(frame);
         frame.setVisible(true);
-        }catch(Exception ex){
             super.repaint();
            JOptionPane.showMessageDialog(null,"Você não pode abrir a janela duas vezes","Erro",JOptionPane.ERROR_MESSAGE);
             
-        }
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**

@@ -33,14 +33,14 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
      * Creates new form JInternalFrameNovoJogo
      * @return 
      */
-    public static JInternalFrameNovoJogo getInstance(){
+    /*public static JInternalFrameNovoJogo getInstance(){
         if (instance == null) {
            instance = new JInternalFrameNovoJogo();
         }
         return instance;
-    }
+    }*/
     
-    private JInternalFrameNovoJogo() {
+    public JInternalFrameNovoJogo() {
         initComponents();
         iniciaJogo();
     }
@@ -86,11 +86,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     }
     
     private static void MostrarBotaoAtributo(){
-        bTeor1.setEnabled(true); bTeor1.setEnabled(true); bTeor1.setEnabled(true); bTeor1.setEnabled(true); bTeor1.setEnabled(true);
-        bPreco1.setEnabled(true); bPreco1.setEnabled(true); bPreco1.setEnabled(true); bPreco1.setEnabled(true); bPreco1.setEnabled(true);
-        bGosto1.setEnabled(true); bGosto1.setEnabled(true); bGosto1.setEnabled(true); bGosto1.setEnabled(true); bGosto1.setEnabled(true);
-        bAmnesia1.setEnabled(true); bAmnesia1.setEnabled(true); bAmnesia1.setEnabled(true); bAmnesia1.setEnabled(true); bAmnesia1.setEnabled(true);
-        bCustBen1.setEnabled(true); bCustBen1.setEnabled(true); bCustBen1.setEnabled(true); bCustBen1.setEnabled(true); bCustBen1.setEnabled(true);
+        bTeor1.setEnabled(true); bTeor2.setEnabled(true); bTeor3.setEnabled(true); bTeor4.setEnabled(true); bTeor5.setEnabled(true);
+        bPreco1.setEnabled(true); bPreco2.setEnabled(true); bPreco3.setEnabled(true); bPreco4.setEnabled(true); bPreco5.setEnabled(true);
+        bGosto1.setEnabled(true); bGosto2.setEnabled(true); bGosto3.setEnabled(true); bGosto4.setEnabled(true); bGosto5.setEnabled(true);
+        bAmnesia1.setEnabled(true); bAmnesia2.setEnabled(true); bAmnesia3.setEnabled(true); bAmnesia4.setEnabled(true); bAmnesia5.setEnabled(true);
+        bCustBen1.setEnabled(true); bCustBen2.setEnabled(true); bCustBen3.setEnabled(true); bCustBen4.setEnabled(true); bCustBen5.setEnabled(true);
         UsarCarta1.setVisible(false); UsarCarta2.setVisible(false); UsarCarta3.setVisible(false); UsarCarta4.setVisible(false); UsarCarta5.setVisible(false);
     }
     
@@ -194,55 +194,55 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         Amnesia1 = new javax.swing.JLabel();
         UsarCarta1 = new javax.swing.JButton();
         nomeCarta3 = new javax.swing.JPanel();
-        btnUserTAlcoolico2 = new javax.swing.JButton();
-        btnUserCusto2 = new javax.swing.JButton();
-        btnUserGosto2 = new javax.swing.JButton();
-        btnUserPreco2 = new javax.swing.JButton();
+        bTeor3 = new javax.swing.JButton();
+        bCustBen3 = new javax.swing.JButton();
+        bGosto3 = new javax.swing.JButton();
+        bPreco3 = new javax.swing.JButton();
         ImagemCarta3 = new javax.swing.JLabel();
         Teor3 = new javax.swing.JLabel();
         Preco3 = new javax.swing.JLabel();
         Gosto3 = new javax.swing.JLabel();
         CustoBen3 = new javax.swing.JLabel();
-        btnUserGosto15 = new javax.swing.JButton();
+        bAmnesia3 = new javax.swing.JButton();
         Amnesia3 = new javax.swing.JLabel();
         UsarCarta3 = new javax.swing.JButton();
         nomeCarta2 = new javax.swing.JPanel();
-        btnUserTAlcoolico3 = new javax.swing.JButton();
-        btnUserCusto3 = new javax.swing.JButton();
-        btnUserGosto3 = new javax.swing.JButton();
-        btnUserPreco3 = new javax.swing.JButton();
+        bTeor2 = new javax.swing.JButton();
+        bCustBen2 = new javax.swing.JButton();
+        bGosto2 = new javax.swing.JButton();
+        bPreco2 = new javax.swing.JButton();
         ImagemCarta2 = new javax.swing.JLabel();
         Teor2 = new javax.swing.JLabel();
         Preco2 = new javax.swing.JLabel();
         Gosto2 = new javax.swing.JLabel();
         CustoBen2 = new javax.swing.JLabel();
-        btnUserGosto16 = new javax.swing.JButton();
+        bAmnesia2 = new javax.swing.JButton();
         Amnesia2 = new javax.swing.JLabel();
         UsarCarta2 = new javax.swing.JButton();
         nomeCarta4 = new javax.swing.JPanel();
-        btnUserTAlcoolico4 = new javax.swing.JButton();
-        btnUserCusto4 = new javax.swing.JButton();
-        btnUserGosto4 = new javax.swing.JButton();
-        btnUserPreco4 = new javax.swing.JButton();
+        bTeor4 = new javax.swing.JButton();
+        bCustBen4 = new javax.swing.JButton();
+        bGosto4 = new javax.swing.JButton();
+        bPreco4 = new javax.swing.JButton();
         ImagemCarta4 = new javax.swing.JLabel();
         Teor4 = new javax.swing.JLabel();
         Preco4 = new javax.swing.JLabel();
         Gosto4 = new javax.swing.JLabel();
         CustoBen4 = new javax.swing.JLabel();
-        btnUserGosto17 = new javax.swing.JButton();
+        bAmnesia4 = new javax.swing.JButton();
         Amnesia4 = new javax.swing.JLabel();
         UsarCarta4 = new javax.swing.JButton();
         nomeCarta5 = new javax.swing.JPanel();
-        btnUserTAlcoolico5 = new javax.swing.JButton();
-        btnUserCusto5 = new javax.swing.JButton();
-        btnUserGosto5 = new javax.swing.JButton();
-        btnUserPreco5 = new javax.swing.JButton();
+        bTeor5 = new javax.swing.JButton();
+        bCustBen5 = new javax.swing.JButton();
+        bGosto5 = new javax.swing.JButton();
+        bPreco5 = new javax.swing.JButton();
         ImagemCarta5 = new javax.swing.JLabel();
         Teor5 = new javax.swing.JLabel();
         Preco5 = new javax.swing.JLabel();
         Gosto5 = new javax.swing.JLabel();
         CustoBen5 = new javax.swing.JLabel();
-        btnUserGosto18 = new javax.swing.JButton();
+        bAmnesia5 = new javax.swing.JButton();
         Amnesia5 = new javax.swing.JLabel();
         UsarCarta5 = new javax.swing.JButton();
         jPanelDeckUsuario2 = new javax.swing.JPanel();
@@ -922,13 +922,13 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         nomeCarta3.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
 
-        btnUserTAlcoolico2.setText("TeorAlcoólico");
+        bTeor3.setText("TeorAlcoólico");
 
-        btnUserCusto2.setText("Custo Beneficio");
+        bCustBen3.setText("Custo Beneficio");
 
-        btnUserGosto2.setText("Gosto");
+        bGosto3.setText("Gosto");
 
-        btnUserPreco2.setText("Preço");
+        bPreco3.setText("Preço");
 
         ImagemCarta3.setText("sfsdfsdf");
 
@@ -940,7 +940,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         CustoBen3.setText("ata");
 
-        btnUserGosto15.setText("Amnesia");
+        bAmnesia3.setText("Amnesia");
 
         Amnesia3.setText("ata");
 
@@ -957,11 +957,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                     .addComponent(UsarCarta3, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                     .addGroup(nomeCarta3Layout.createSequentialGroup()
                         .addGroup(nomeCarta3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnUserCusto2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(btnUserGosto2, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
-                            .addComponent(btnUserPreco2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnUserTAlcoolico2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(btnUserGosto15, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                            .addComponent(bCustBen3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(bGosto3, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                            .addComponent(bPreco3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bTeor3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(bAmnesia3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(nomeCarta3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CustoBen3, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -982,23 +982,23 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                 .addComponent(ImagemCarta3)
                 .addGap(18, 18, 18)
                 .addGroup(nomeCarta3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserTAlcoolico2)
+                    .addComponent(bTeor3)
                     .addComponent(Teor3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserPreco2)
+                    .addComponent(bPreco3)
                     .addComponent(Preco3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserGosto2)
+                    .addComponent(bGosto3)
                     .addComponent(Gosto3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserGosto15)
+                    .addComponent(bAmnesia3)
                     .addComponent(Amnesia3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserCusto2)
+                    .addComponent(bCustBen3)
                     .addComponent(CustoBen3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(UsarCarta3))
@@ -1006,13 +1006,13 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         nomeCarta2.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
 
-        btnUserTAlcoolico3.setText("TeorAlcoólico");
+        bTeor2.setText("TeorAlcoólico");
 
-        btnUserCusto3.setText("Custo Beneficio");
+        bCustBen2.setText("Custo Beneficio");
 
-        btnUserGosto3.setText("Gosto");
+        bGosto2.setText("Gosto");
 
-        btnUserPreco3.setText("Preço");
+        bPreco2.setText("Preço");
 
         ImagemCarta2.setText("sfsdfsdf");
 
@@ -1024,7 +1024,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         CustoBen2.setText("ata");
 
-        btnUserGosto16.setText("Amnesia");
+        bAmnesia2.setText("Amnesia");
 
         Amnesia2.setText("ata");
 
@@ -1041,11 +1041,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                     .addComponent(UsarCarta2, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                     .addGroup(nomeCarta2Layout.createSequentialGroup()
                         .addGroup(nomeCarta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnUserCusto3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(btnUserGosto3, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
-                            .addComponent(btnUserPreco3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnUserTAlcoolico3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(btnUserGosto16, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                            .addComponent(bCustBen2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(bGosto2, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                            .addComponent(bPreco2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bTeor2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(bAmnesia2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(nomeCarta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CustoBen2, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1066,23 +1066,23 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                 .addComponent(ImagemCarta2)
                 .addGap(18, 18, 18)
                 .addGroup(nomeCarta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserTAlcoolico3)
+                    .addComponent(bTeor2)
                     .addComponent(Teor2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserPreco3)
+                    .addComponent(bPreco2)
                     .addComponent(Preco2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserGosto3)
+                    .addComponent(bGosto2)
                     .addComponent(Gosto2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserGosto16)
+                    .addComponent(bAmnesia2)
                     .addComponent(Amnesia2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserCusto3)
+                    .addComponent(bCustBen2)
                     .addComponent(CustoBen2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(UsarCarta2))
@@ -1090,13 +1090,13 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         nomeCarta4.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
 
-        btnUserTAlcoolico4.setText("TeorAlcoólico");
+        bTeor4.setText("TeorAlcoólico");
 
-        btnUserCusto4.setText("Custo Beneficio");
+        bCustBen4.setText("Custo Beneficio");
 
-        btnUserGosto4.setText("Gosto");
+        bGosto4.setText("Gosto");
 
-        btnUserPreco4.setText("Preço");
+        bPreco4.setText("Preço");
 
         ImagemCarta4.setText("sfsdfsdf");
 
@@ -1108,7 +1108,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         CustoBen4.setText("ata");
 
-        btnUserGosto17.setText("Amnesia");
+        bAmnesia4.setText("Amnesia");
 
         Amnesia4.setText("ata");
 
@@ -1125,11 +1125,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                     .addComponent(UsarCarta4, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
                     .addGroup(nomeCarta4Layout.createSequentialGroup()
                         .addGroup(nomeCarta4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnUserCusto4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(btnUserGosto4, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
-                            .addComponent(btnUserPreco4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnUserTAlcoolico4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(btnUserGosto17, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                            .addComponent(bCustBen4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(bGosto4, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                            .addComponent(bPreco4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bTeor4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(bAmnesia4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(nomeCarta4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CustoBen4, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1150,23 +1150,23 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                 .addComponent(ImagemCarta4)
                 .addGap(18, 18, 18)
                 .addGroup(nomeCarta4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserTAlcoolico4)
+                    .addComponent(bTeor4)
                     .addComponent(Teor4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserPreco4)
+                    .addComponent(bPreco4)
                     .addComponent(Preco4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserGosto4)
+                    .addComponent(bGosto4)
                     .addComponent(Gosto4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserGosto17)
+                    .addComponent(bAmnesia4)
                     .addComponent(Amnesia4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserCusto4)
+                    .addComponent(bCustBen4)
                     .addComponent(CustoBen4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(UsarCarta4))
@@ -1174,13 +1174,13 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         nomeCarta5.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome_Carta"));
 
-        btnUserTAlcoolico5.setText("TeorAlcoólico");
+        bTeor5.setText("TeorAlcoólico");
 
-        btnUserCusto5.setText("Custo Beneficio");
+        bCustBen5.setText("Custo Beneficio");
 
-        btnUserGosto5.setText("Gosto");
+        bGosto5.setText("Gosto");
 
-        btnUserPreco5.setText("Preço");
+        bPreco5.setText("Preço");
 
         ImagemCarta5.setText("sfsdfsdf");
 
@@ -1192,7 +1192,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
         CustoBen5.setText("ata");
 
-        btnUserGosto18.setText("Amnesia");
+        bAmnesia5.setText("Amnesia");
 
         Amnesia5.setText("ata");
 
@@ -1209,11 +1209,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                     .addComponent(UsarCarta5, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                     .addGroup(nomeCarta5Layout.createSequentialGroup()
                         .addGroup(nomeCarta5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnUserCusto5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(btnUserGosto5, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
-                            .addComponent(btnUserPreco5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnUserTAlcoolico5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(btnUserGosto18, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                            .addComponent(bCustBen5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(bGosto5, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                            .addComponent(bPreco5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bTeor5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(bAmnesia5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(nomeCarta5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CustoBen5, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1234,23 +1234,23 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                 .addComponent(ImagemCarta5)
                 .addGap(18, 18, 18)
                 .addGroup(nomeCarta5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserTAlcoolico5)
+                    .addComponent(bTeor5)
                     .addComponent(Teor5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserPreco5)
+                    .addComponent(bPreco5)
                     .addComponent(Preco5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserGosto5)
+                    .addComponent(bGosto5)
                     .addComponent(Gosto5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserGosto18)
+                    .addComponent(bAmnesia5)
                     .addComponent(Amnesia5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nomeCarta5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnUserCusto5)
+                    .addComponent(bCustBen5)
                     .addComponent(CustoBen5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(UsarCarta5))
@@ -1319,7 +1319,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                         .addComponent(panelMaoCpu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanelDeckUsuario2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1389,10 +1389,30 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     private static javax.swing.JButton UsarCarta4;
     private static javax.swing.JButton UsarCarta5;
     private static javax.swing.JButton bAmnesia1;
+    private static javax.swing.JButton bAmnesia2;
+    private static javax.swing.JButton bAmnesia3;
+    private static javax.swing.JButton bAmnesia4;
+    private static javax.swing.JButton bAmnesia5;
     private static javax.swing.JButton bCustBen1;
+    private static javax.swing.JButton bCustBen2;
+    private static javax.swing.JButton bCustBen3;
+    private static javax.swing.JButton bCustBen4;
+    private static javax.swing.JButton bCustBen5;
     private static javax.swing.JButton bGosto1;
+    private static javax.swing.JButton bGosto2;
+    private static javax.swing.JButton bGosto3;
+    private static javax.swing.JButton bGosto4;
+    private static javax.swing.JButton bGosto5;
     private static javax.swing.JButton bPreco1;
+    private static javax.swing.JButton bPreco2;
+    private static javax.swing.JButton bPreco3;
+    private static javax.swing.JButton bPreco4;
+    private static javax.swing.JButton bPreco5;
     private static javax.swing.JButton bTeor1;
+    private static javax.swing.JButton bTeor2;
+    private static javax.swing.JButton bTeor3;
+    private static javax.swing.JButton bTeor4;
+    private static javax.swing.JButton bTeor5;
     private javax.swing.JButton btnPcCusto1;
     private javax.swing.JButton btnPcCusto2;
     private javax.swing.JButton btnPcCusto3;
@@ -1415,29 +1435,9 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnPcTAlcoolico3;
     private javax.swing.JButton btnPcTAlcoolico4;
     private javax.swing.JButton btnPcTAlcoolico5;
-    private javax.swing.JButton btnUserCusto2;
-    private javax.swing.JButton btnUserCusto3;
-    private javax.swing.JButton btnUserCusto4;
-    private javax.swing.JButton btnUserCusto5;
-    private javax.swing.JButton btnUserGosto15;
-    private javax.swing.JButton btnUserGosto16;
-    private javax.swing.JButton btnUserGosto17;
-    private javax.swing.JButton btnUserGosto18;
-    private javax.swing.JButton btnUserGosto2;
-    private javax.swing.JButton btnUserGosto3;
-    private javax.swing.JButton btnUserGosto4;
-    private javax.swing.JButton btnUserGosto5;
     private javax.swing.JButton btnUserGostoSelect;
-    private javax.swing.JButton btnUserPreco2;
-    private javax.swing.JButton btnUserPreco3;
-    private javax.swing.JButton btnUserPreco4;
-    private javax.swing.JButton btnUserPreco5;
     private javax.swing.JButton btnUserSelectPreco;
     private javax.swing.JButton btnUserSelectTAlcoolico1;
-    private javax.swing.JButton btnUserTAlcoolico2;
-    private javax.swing.JButton btnUserTAlcoolico3;
-    private javax.swing.JButton btnUserTAlcoolico4;
-    private javax.swing.JButton btnUserTAlcoolico5;
     private javax.swing.JPanel cartaPc1;
     private javax.swing.JPanel cartaPc2;
     private javax.swing.JPanel cartaPc3;

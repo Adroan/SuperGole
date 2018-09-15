@@ -61,7 +61,7 @@
                       <Component id="jPanelDeckUsuario2" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="24" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -1332,11 +1332,11 @@
                           <Component id="UsarCarta3" alignment="0" pref="150" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btnUserCusto2" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto2" alignment="0" pref="77" max="32767" attributes="0"/>
-                                  <Component id="btnUserPreco2" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserTAlcoolico2" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto15" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="bCustBen3" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="bGosto3" alignment="0" pref="77" max="32767" attributes="0"/>
+                                  <Component id="bPreco3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="bTeor3" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="bAmnesia3" alignment="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -1364,27 +1364,27 @@
                       <Component id="ImagemCarta3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserTAlcoolico2" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bTeor3" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Teor3" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserPreco2" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bPreco3" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Preco3" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserGosto2" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bGosto3" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Gosto3" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserGosto15" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bAmnesia3" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Amnesia3" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserCusto2" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bCustBen3" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="CustoBen3" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -1394,25 +1394,37 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="btnUserTAlcoolico2">
+            <Component class="javax.swing.JButton" name="bTeor3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="TeorAlco&#xf3;lico"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserCusto2">
+            <Component class="javax.swing.JButton" name="bCustBen3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Custo Beneficio"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserGosto2">
+            <Component class="javax.swing.JButton" name="bGosto3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Gosto"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserPreco2">
+            <Component class="javax.swing.JButton" name="bPreco3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pre&#xe7;o"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="ImagemCarta3">
               <Properties>
@@ -1454,10 +1466,13 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserGosto15">
+            <Component class="javax.swing.JButton" name="bAmnesia3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Amnesia"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="Amnesia3">
               <Properties>
@@ -1499,11 +1514,11 @@
                           <Component id="UsarCarta2" alignment="0" pref="150" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btnUserCusto3" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto3" alignment="0" pref="77" max="32767" attributes="0"/>
-                                  <Component id="btnUserPreco3" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserTAlcoolico3" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto16" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="bCustBen2" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="bGosto2" alignment="0" pref="77" max="32767" attributes="0"/>
+                                  <Component id="bPreco2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="bTeor2" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="bAmnesia2" alignment="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -1531,27 +1546,27 @@
                       <Component id="ImagemCarta2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserTAlcoolico3" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bTeor2" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Teor2" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserPreco3" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bPreco2" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Preco2" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserGosto3" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bGosto2" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Gosto2" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserGosto16" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bAmnesia2" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Amnesia2" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserCusto3" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bCustBen2" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="CustoBen2" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -1561,25 +1576,37 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="btnUserTAlcoolico3">
+            <Component class="javax.swing.JButton" name="bTeor2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="TeorAlco&#xf3;lico"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserCusto3">
+            <Component class="javax.swing.JButton" name="bCustBen2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Custo Beneficio"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserGosto3">
+            <Component class="javax.swing.JButton" name="bGosto2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Gosto"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserPreco3">
+            <Component class="javax.swing.JButton" name="bPreco2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pre&#xe7;o"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="ImagemCarta2">
               <Properties>
@@ -1621,10 +1648,13 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserGosto16">
+            <Component class="javax.swing.JButton" name="bAmnesia2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Amnesia"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="Amnesia2">
               <Properties>
@@ -1666,11 +1696,11 @@
                           <Component id="UsarCarta4" alignment="0" pref="154" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btnUserCusto4" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto4" alignment="0" pref="77" max="32767" attributes="0"/>
-                                  <Component id="btnUserPreco4" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserTAlcoolico4" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto17" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="bCustBen4" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="bGosto4" alignment="0" pref="77" max="32767" attributes="0"/>
+                                  <Component id="bPreco4" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="bTeor4" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="bAmnesia4" alignment="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -1698,27 +1728,27 @@
                       <Component id="ImagemCarta4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserTAlcoolico4" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bTeor4" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Teor4" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserPreco4" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bPreco4" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Preco4" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserGosto4" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bGosto4" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Gosto4" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserGosto17" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bAmnesia4" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Amnesia4" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserCusto4" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bCustBen4" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="CustoBen4" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -1728,25 +1758,37 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="btnUserTAlcoolico4">
+            <Component class="javax.swing.JButton" name="bTeor4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="TeorAlco&#xf3;lico"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserCusto4">
+            <Component class="javax.swing.JButton" name="bCustBen4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Custo Beneficio"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserGosto4">
+            <Component class="javax.swing.JButton" name="bGosto4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Gosto"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserPreco4">
+            <Component class="javax.swing.JButton" name="bPreco4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pre&#xe7;o"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="ImagemCarta4">
               <Properties>
@@ -1788,10 +1830,13 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserGosto17">
+            <Component class="javax.swing.JButton" name="bAmnesia4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Amnesia"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="Amnesia4">
               <Properties>
@@ -1833,11 +1878,11 @@
                           <Component id="UsarCarta5" alignment="0" pref="150" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btnUserCusto5" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto5" alignment="0" pref="77" max="32767" attributes="0"/>
-                                  <Component id="btnUserPreco5" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserTAlcoolico5" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="btnUserGosto18" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="bCustBen5" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="bGosto5" alignment="0" pref="77" max="32767" attributes="0"/>
+                                  <Component id="bPreco5" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="bTeor5" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="bAmnesia5" alignment="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -1865,27 +1910,27 @@
                       <Component id="ImagemCarta5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserTAlcoolico5" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bTeor5" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Teor5" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserPreco5" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bPreco5" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Preco5" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserGosto5" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bGosto5" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Gosto5" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserGosto18" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bAmnesia5" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="Amnesia5" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnUserCusto5" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="bCustBen5" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="CustoBen5" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -1895,25 +1940,37 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="btnUserTAlcoolico5">
+            <Component class="javax.swing.JButton" name="bTeor5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="TeorAlco&#xf3;lico"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserCusto5">
+            <Component class="javax.swing.JButton" name="bCustBen5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Custo Beneficio"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserGosto5">
+            <Component class="javax.swing.JButton" name="bGosto5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Gosto"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserPreco5">
+            <Component class="javax.swing.JButton" name="bPreco5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pre&#xe7;o"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="ImagemCarta5">
               <Properties>
@@ -1955,10 +2012,13 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnUserGosto18">
+            <Component class="javax.swing.JButton" name="bAmnesia5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Amnesia"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="Amnesia5">
               <Properties>
