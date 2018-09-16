@@ -30,15 +30,14 @@ public class MecanicaPC {
     
     public static Bebidas verificarId(ArrayList<Bebidas> mao){
         for (int i = 0; i < 5; i++) {
-            if(mao.get(i) == null){  
-            }else if(mao.get(i).getId() > maiorId){
+            if(mao.get(i) != null){
+                if (mao.get(i).getId() > maiorId){
                     maiorId = mao.get(i).getId();
                     carta = mao.get(i);
+                }  
             }
         }
-     
-        return carta;
-
+            return carta;
     }
 
     public ArrayList<Bebidas> getMaoPc() {

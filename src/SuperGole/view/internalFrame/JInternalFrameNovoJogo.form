@@ -364,12 +364,13 @@
                   <Component id="nomeCarta1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="nomeCarta2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="nomeCarta3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="nomeCarta4" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="nomeCarta5" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -406,16 +407,18 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="UsarCarta1" pref="182" max="32767" attributes="0"/>
+                          <Component id="UsarCarta1" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="bCustBen1" pref="0" max="32767" attributes="0"/>
-                                  <Component id="bGosto1" alignment="0" pref="77" max="32767" attributes="0"/>
-                                  <Component id="bPreco1" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="bTeor1" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="bAmnesia1" pref="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="bGosto1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="bPreco1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="bTeor1" alignment="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="bAmnesia1" pref="77" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="bCustBen1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="20" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="CustoBen1" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="Teor1" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -593,16 +596,18 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="UsarCarta3" alignment="0" pref="150" max="32767" attributes="0"/>
+                          <Component id="UsarCarta3" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="bCustBen3" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="bGosto3" alignment="0" pref="77" max="32767" attributes="0"/>
-                                  <Component id="bPreco3" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="bTeor3" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="bAmnesia3" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="bGosto3" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="bPreco3" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="bTeor3" alignment="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="bAmnesia3" alignment="0" pref="77" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="bCustBen3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="14" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="CustoBen3" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="Teor3" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -778,16 +783,18 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="UsarCarta2" alignment="0" pref="182" max="32767" attributes="0"/>
+                          <Component id="UsarCarta2" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="bCustBen2" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="bGosto2" alignment="0" pref="77" max="32767" attributes="0"/>
-                                  <Component id="bPreco2" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="bTeor2" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="bAmnesia2" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="bGosto2" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="bPreco2" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="bTeor2" alignment="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="bAmnesia2" alignment="0" pref="77" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="bCustBen2" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="17" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="CustoBen2" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="Teor2" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -963,16 +970,18 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="UsarCarta4" alignment="0" pref="154" max="32767" attributes="0"/>
+                          <Component id="UsarCarta4" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="bCustBen4" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="bGosto4" alignment="0" pref="77" max="32767" attributes="0"/>
-                                  <Component id="bPreco4" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="bTeor4" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="bAmnesia4" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="bGosto4" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="bPreco4" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="bTeor4" alignment="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="bAmnesia4" alignment="0" pref="77" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="bCustBen4" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="14" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="CustoBen4" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="Teor4" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -1150,12 +1159,14 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="UsarCarta5" alignment="0" pref="150" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="bCustBen5" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="bGosto5" alignment="0" pref="77" max="32767" attributes="0"/>
-                                  <Component id="bPreco5" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="bTeor5" alignment="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="bAmnesia5" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="bGosto5" alignment="0" pref="77" max="32767" attributes="0"/>
+                                      <Component id="bPreco5" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="bTeor5" alignment="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="bAmnesia5" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="bCustBen5" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">

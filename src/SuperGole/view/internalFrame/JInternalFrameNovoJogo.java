@@ -62,7 +62,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
        deckUsuario = jogo.getDeckUsuario();
        maoPc = jogo.getMaoPc();
        maoUsuario = jogo.getMaoUsuario();
-       preencherMaoTela(maoUsuario);
+       preencherMaoTela();
        Random gerador = new Random();
        turno = gerador.nextInt(2);
        nomeCarta6.setVisible(false);
@@ -89,14 +89,14 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         
     }
     
-    private static void preencherMaoTela(ArrayList<Bebidas> maoUsuario){
+    private static void preencherMaoTela() throws NullPointerException{
         setCarta(Teor1,Preco1,Gosto1,Amnesia1,CustoBen1,maoUsuario.get(0),nomeCarta1);
         setCarta(Teor2,Preco2,Gosto2,Amnesia2,CustoBen2,maoUsuario.get(1),nomeCarta2);
         setCarta(Teor3,Preco3,Gosto3,Amnesia3,CustoBen3,maoUsuario.get(2),nomeCarta3);
         setCarta(Teor4,Preco4,Gosto4,Amnesia4,CustoBen4,maoUsuario.get(3),nomeCarta4);
         setCarta(Teor5,Preco5,Gosto5,Amnesia5,CustoBen5,maoUsuario.get(4),nomeCarta5);
     }
-    private static void preencherMaoPc(ArrayList<Bebidas> maoPc){
+    private static void preencherMaoPc(){
         setCartaPc(cartaPc1,maoPc.get(0));
         setCartaPc(cartaPc2,maoPc.get(1));
         setCartaPc(cartaPc3,maoPc.get(2));
@@ -104,69 +104,24 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         setCartaPc(cartaPc5,maoPc.get(4));         
     }
     
-    private static void setCarta(JLabel teor,JLabel preco, JLabel gosto, JLabel amnesia, JLabel custBen,Bebidas carta, JPanel nome){
+    private static void setCarta(JLabel teor,JLabel preco, JLabel gosto, JLabel amnesia, JLabel custBen,Bebidas carta, JPanel painel){
         if(carta == null){
-          if(vencedor == -1){
-              Bebidas cartaTemp = deckUsuario.dequeue();
-            if((nomeCarta1.isVisible() == true) && (nomeCarta2.isVisible() == false) && (nomeCarta3.isVisible() == false) && (nomeCarta4.isVisible() == false) && (nomeCarta5.isVisible() == false)){
-                nomeCarta2.setVisible(true);
-                teor.setText(String.valueOf(cartaTemp.getTeorAlco()));
-                preco.setText(String.valueOf(cartaTemp.getPreco()));
-                gosto.setText(String.valueOf(cartaTemp.getGosto()));
-                amnesia.setText(String.valueOf(cartaTemp.getAmnesia()));
-                custBen.setText(String.valueOf(cartaTemp.getCustBene()));
-                nome.setBorder(javax.swing.BorderFactory.createTitledBorder(cartaTemp.getNome()));
-                maoUsuario.set(1,cartaTemp);
-            }
-            if((nomeCarta1.isVisible() == true) && (nomeCarta2.isVisible() == true) && (nomeCarta3.isVisible() == false) && (nomeCarta4.isVisible() == false) && (nomeCarta5.isVisible() == false)){
-                nomeCarta3.setVisible(true);
-                teor.setText(String.valueOf(cartaTemp.getTeorAlco()));
-                preco.setText(String.valueOf(cartaTemp.getPreco()));
-                gosto.setText(String.valueOf(cartaTemp.getGosto()));
-                amnesia.setText(String.valueOf(cartaTemp.getAmnesia()));
-                custBen.setText(String.valueOf(cartaTemp.getCustBene()));
-                nome.setBorder(javax.swing.BorderFactory.createTitledBorder(cartaTemp.getNome()));
-                maoUsuario.set(2,cartaTemp);
-            }
-            if((nomeCarta1.isVisible() == true) && (nomeCarta2.isVisible() == true) && (nomeCarta3.isVisible() == true) && (nomeCarta4.isVisible() == false) && (nomeCarta5.isVisible() == false)){
-                nomeCarta4.setVisible(true);
-                teor.setText(String.valueOf(cartaTemp.getTeorAlco()));
-                preco.setText(String.valueOf(cartaTemp.getPreco()));
-                gosto.setText(String.valueOf(cartaTemp.getGosto()));
-                amnesia.setText(String.valueOf(cartaTemp.getAmnesia()));
-                custBen.setText(String.valueOf(cartaTemp.getCustBene()));
-                nome.setBorder(javax.swing.BorderFactory.createTitledBorder(cartaTemp.getNome()));
-                maoUsuario.set(3,cartaTemp);
-            }
-            if((nomeCarta1.isVisible() == true) && (nomeCarta2.isVisible() == true) && (nomeCarta3.isVisible() == true) &&(nomeCarta4.isVisible() == true) && (nomeCarta5.isVisible() == false)){
-                nomeCarta5.setVisible(true);
-                teor.setText(String.valueOf(cartaTemp.getTeorAlco()));
-                preco.setText(String.valueOf(cartaTemp.getPreco()));
-                gosto.setText(String.valueOf(cartaTemp.getGosto()));
-                amnesia.setText(String.valueOf(cartaTemp.getAmnesia()));
-                custBen.setText(String.valueOf(cartaTemp.getCustBene()));
-                nome.setBorder(javax.swing.BorderFactory.createTitledBorder(cartaTemp.getNome()));
-                maoUsuario.set(4,cartaTemp);
-            }
-          }else{
-              nome.setVisible(false);
-          }
-
+          painel.setVisible(false);
         }else{
         teor.setText(String.valueOf(carta.getTeorAlco()));
         preco.setText(String.valueOf(carta.getPreco()));
         gosto.setText(String.valueOf(carta.getGosto()));
         amnesia.setText(String.valueOf(carta.getAmnesia()));
         custBen.setText(String.valueOf(carta.getCustBene()));
-        nome.setBorder(javax.swing.BorderFactory.createTitledBorder(carta.getNome()));
-        nome.setVisible(true);
+        painel.setBorder(javax.swing.BorderFactory.createTitledBorder(carta.getNome()));
+        painel.setVisible(true);
         }
     }
-    private static void setCartaPc(JPanel nome, Bebidas carta){
+    private static void setCartaPc(JPanel painel, Bebidas carta){
         if(carta == null){
-            nome.setVisible(false);
+            painel.setVisible(false);
         }else{
-            nome.setVisible(true);
+            painel.setVisible(true);
         }
     }
     
@@ -260,6 +215,18 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         }
         
         
+    }
+    
+    private static void atualizarCarta(ArrayList<Bebidas> mao, LinkedQueue<Bebidas> deck){
+        int position = 0;
+        boolean cartaInserida = false;
+            while(cartaInserida == false || position < 5){
+                if(mao.get(position) == null){
+                    mao.set(position, deck.dequeue());
+                    cartaInserida = true;
+                }
+                position++;
+            }
     }
   
     
@@ -586,15 +553,16 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
             .addGroup(nomeCarta1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(nomeCarta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(UsarCarta1, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
+                    .addComponent(UsarCarta1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(nomeCarta1Layout.createSequentialGroup()
-                        .addGroup(nomeCarta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(bCustBen1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(bGosto1, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
-                            .addComponent(bPreco1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(bTeor1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(bAmnesia1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(nomeCarta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(nomeCarta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(bGosto1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bPreco1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bTeor1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(bAmnesia1, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE))
+                            .addComponent(bCustBen1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addGroup(nomeCarta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CustoBen1, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Teor1, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -692,15 +660,16 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
             .addGroup(nomeCarta3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(nomeCarta3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(UsarCarta3, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                    .addComponent(UsarCarta3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(nomeCarta3Layout.createSequentialGroup()
-                        .addGroup(nomeCarta3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(bCustBen3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(bGosto3, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
-                            .addComponent(bPreco3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(bTeor3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(bAmnesia3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(nomeCarta3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(nomeCarta3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(bGosto3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bPreco3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bTeor3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(bAmnesia3, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE))
+                            .addComponent(bCustBen3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                         .addGroup(nomeCarta3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CustoBen3, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Teor3, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -798,15 +767,16 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
             .addGroup(nomeCarta2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(nomeCarta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(UsarCarta2, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
+                    .addComponent(UsarCarta2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(nomeCarta2Layout.createSequentialGroup()
-                        .addGroup(nomeCarta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(bCustBen2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(bGosto2, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
-                            .addComponent(bPreco2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(bTeor2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(bAmnesia2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(nomeCarta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(nomeCarta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(bGosto2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bPreco2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bTeor2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(bAmnesia2, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE))
+                            .addComponent(bCustBen2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                         .addGroup(nomeCarta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CustoBen2, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Teor2, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -904,15 +874,16 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
             .addGroup(nomeCarta4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(nomeCarta4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(UsarCarta4, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                    .addComponent(UsarCarta4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(nomeCarta4Layout.createSequentialGroup()
-                        .addGroup(nomeCarta4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(bCustBen4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(bGosto4, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
-                            .addComponent(bPreco4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(bTeor4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(bAmnesia4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(nomeCarta4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(nomeCarta4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(bGosto4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bPreco4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bTeor4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(bAmnesia4, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE))
+                            .addComponent(bCustBen4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                         .addGroup(nomeCarta4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CustoBen4, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Teor4, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1012,12 +983,13 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                 .addGroup(nomeCarta5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(UsarCarta5, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                     .addGroup(nomeCarta5Layout.createSequentialGroup()
-                        .addGroup(nomeCarta5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(bCustBen5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(bGosto5, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
-                            .addComponent(bPreco5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(bTeor5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(bAmnesia5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addGroup(nomeCarta5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(nomeCarta5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(bGosto5, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                                .addComponent(bPreco5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bTeor5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(bAmnesia5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                            .addComponent(bCustBen5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(nomeCarta5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CustoBen5, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1063,12 +1035,13 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                 .addComponent(nomeCarta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nomeCarta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(nomeCarta3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nomeCarta4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(nomeCarta5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nomeCarta5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(105, 105, 105))
         );
         panelMaoJogadorLayout.setVerticalGroup(
             panelMaoJogadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1365,18 +1338,20 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_bTeor1MouseClicked
 
     private void bTeor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTeor1ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(0),3);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(0),3);
+        maoUsuario.set(0,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(0,null);
+
         }else{
-            maoUsuario.set(0,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bTeor1ActionPerformed
@@ -1385,15 +1360,17 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(0));
-        if(deckUsuario.isEmpty()  == true){
-            maoUsuario.set(0,null);
+        maoUsuario.set(0,null);
+        maoPc.set(posicaoPc, null);
+        if(deckUsuario.isEmpty()){
+
         }else{
-            maoUsuario.set(0,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
-        if(deckPc.isEmpty() == true){
-            maoPc.set(posicaoPc,null);
+        if(deckPc.isEmpty()){
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 1;
     }//GEN-LAST:event_mouseClickedUsarCarta1
@@ -1404,8 +1381,8 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         TextoVencedor.setText("");
         panelMaoJogador.setVisible(true);
         BotaoContinuar.setEnabled(false);
-        preencherMaoTela(maoUsuario);
-        preencherMaoPc(maoPc);
+        preencherMaoTela();
+        preencherMaoPc();
         AtributoPc.setText("");
         if(turno == 1){
             turno = 0;
@@ -1420,69 +1397,77 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_UsarCarta1ActionPerformed
 
     private void bPreco1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPreco1ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(0),1);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(0),1);
+        maoUsuario.set(0,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(0,null);
+
         }else{
-            maoUsuario.set(0,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bPreco1ActionPerformed
 
     private void bGosto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGosto1ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(0),2);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(0),2);
+        maoUsuario.set(0,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(0,null);
+
         }else{
-            maoUsuario.set(0,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bGosto1ActionPerformed
 
     private void bAmnesia1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAmnesia1ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(0),4);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(0),4);
+        maoUsuario.set(0,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(0,null);
+
         }else{
-            maoUsuario.set(0,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bAmnesia1ActionPerformed
 
     private void bCustBen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCustBen1ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(0),5);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(0),5);
+        maoUsuario.set(0,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(0,null);
+
         }else{
-            maoUsuario.set(0,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bCustBen1ActionPerformed
@@ -1491,15 +1476,17 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(1));
+        maoUsuario.set(1,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(1,null);
+
         }else{
-            maoUsuario.set(1,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 1;
     }//GEN-LAST:event_UsarCarta2ActionPerformed
@@ -1508,32 +1495,36 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(2));
+        maoUsuario.set(2,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(2,null);
+
         }else{
-            maoUsuario.set(2,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 1;
     }//GEN-LAST:event_UsarCarta3ActionPerformed
 
     private void UsarCarta4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsarCarta4ActionPerformed
-        nomeCarta6.setVisible(true);
+       nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(3));
+        maoUsuario.set(3,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(3,null);
+
         }else{
-            maoUsuario.set(3,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 1;
     }//GEN-LAST:event_UsarCarta4ActionPerformed
@@ -1542,355 +1533,397 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(4));
+        maoUsuario.set(4,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(4,null);
+
         }else{
-            maoUsuario.set(4,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 1;
     }//GEN-LAST:event_UsarCarta5ActionPerformed
 
     private void bTeor2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTeor2ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(1),3);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(1),3);
+        maoUsuario.set(1,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(1,null);
+
         }else{
-            maoUsuario.set(1,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bTeor2ActionPerformed
 
     private void bTeor3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTeor3ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(2),3);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(2),3);
+        maoUsuario.set(2,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(2,null);
+
         }else{
-            maoUsuario.set(2,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bTeor3ActionPerformed
 
     private void bTeor4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTeor4ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(3),3);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(3),3);
+        maoUsuario.set(3,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(3,null);
+
         }else{
-            maoUsuario.set(3,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bTeor4ActionPerformed
 
     private void bTeor5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTeor5ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(4),3);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(4),3);
+        maoUsuario.set(4,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(4,null);
+
         }else{
-            maoUsuario.set(4,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bTeor5ActionPerformed
 
     private void bPreco2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPreco2ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(1),1);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(1),1);
+        maoUsuario.set(1,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(1,null);
+
         }else{
-            maoUsuario.set(1,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bPreco2ActionPerformed
 
     private void bPreco3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPreco3ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(2),1);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(2),1);
+        maoUsuario.set(2,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(2,null);
+
         }else{
-            maoUsuario.set(2,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bPreco3ActionPerformed
 
     private void bPreco4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPreco4ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(3),1);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(3),1);
+        maoUsuario.set(3,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(3,null);
+
         }else{
-            maoUsuario.set(3,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bPreco4ActionPerformed
 
     private void bPreco5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPreco5ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(4),1);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(4),1);
+        maoUsuario.set(4,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(4,null);
+
         }else{
-            maoUsuario.set(4,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bPreco5ActionPerformed
 
     private void bGosto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGosto2ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(1),2);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(1),2);
+        maoUsuario.set(1,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(1,null);
+
         }else{
-            maoUsuario.set(1,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bGosto2ActionPerformed
 
     private void bGosto3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGosto3ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(2),2);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(2),2);
+        maoUsuario.set(2,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(2,null);
+
         }else{
-            maoUsuario.set(2,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bGosto3ActionPerformed
 
     private void bGosto4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGosto4ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(3),2);
-        nomeCarta6.setVisible(true);
+       nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(3),2);
+        maoUsuario.set(3,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(3,null);
+
         }else{
-            maoUsuario.set(3,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bGosto4ActionPerformed
 
     private void bGosto5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGosto5ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(4),2);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(4),2);
+        maoUsuario.set(4,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(4,null);
+
         }else{
-            maoUsuario.set(4,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bGosto5ActionPerformed
 
     private void bAmnesia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAmnesia2ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(1),4);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(1),4);
+        maoUsuario.set(1,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(1,null);
+
         }else{
-            maoUsuario.set(1,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bAmnesia2ActionPerformed
 
     private void bAmnesia3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAmnesia3ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(2),4);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(2),4);
+        maoUsuario.set(2,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(2,null);
+
         }else{
-            maoUsuario.set(2,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bAmnesia3ActionPerformed
 
     private void bAmnesia4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAmnesia4ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(3),4);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(3),4);
+        maoUsuario.set(3,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(3,null);
+
         }else{
-            maoUsuario.set(3,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bAmnesia4ActionPerformed
 
     private void bAmnesia5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAmnesia5ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(4),4);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(4),4);
+        maoUsuario.set(4,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(4,null);
+
         }else{
-            maoUsuario.set(4,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bAmnesia5ActionPerformed
 
     private void bCustBen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCustBen2ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(1),5);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(1),5);
+        maoUsuario.set(1,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(1,null);
+
         }else{
-            maoUsuario.set(1,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bCustBen2ActionPerformed
 
     private void bCustBen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCustBen3ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(2),5);
-        nomeCarta6.setVisible(true);
+       nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(2),5);
+        maoUsuario.set(2,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(2,null);
+
         }else{
-            maoUsuario.set(2,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bCustBen3ActionPerformed
 
     private void bCustBen4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCustBen4ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(3),5);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(3),5);
+        maoUsuario.set(3,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(3,null);
+
         }else{
-            maoUsuario.set(3,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bCustBen4ActionPerformed
 
     private void bCustBen5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCustBen5ActionPerformed
-        enviarBebidaBatalhaUsuario(maoUsuario.get(4),5);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
+        enviarBebidaBatalhaUsuario(maoUsuario.get(4),5);
+        maoUsuario.set(4,null);
+        maoPc.set(posicaoPc, null);
         if(deckUsuario.isEmpty()){
-            maoUsuario.set(4,null);
+
         }else{
-            maoUsuario.set(4,deckUsuario.dequeue());
+           atualizarCarta(maoUsuario, deckUsuario);
         }
         if(deckPc.isEmpty()){
-            maoPc.set(posicaoPc,null);
+           
         }else{
-            maoPc.set(posicaoPc,deckPc.dequeue());
+            atualizarCarta(maoPc, deckPc);
         }
         turno = 0;
     }//GEN-LAST:event_bCustBen5ActionPerformed
