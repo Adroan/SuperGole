@@ -1041,7 +1041,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                 .addComponent(nomeCarta4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nomeCarta5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(105, 105, 105))
+                .addGap(120, 120, 120))
         );
         panelMaoJogadorLayout.setVerticalGroup(
             panelMaoJogadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
