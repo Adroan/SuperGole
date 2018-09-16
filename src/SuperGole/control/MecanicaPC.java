@@ -20,6 +20,8 @@ public class MecanicaPC {
     protected static double mediaGosto = 39.35d; // Maior
     protected static double mediaCustoBeneficio = 48.5d; // Maior
     protected static int maiorId = 0;
+    protected static Bebidas carta = new Bebidas();
+    protected static int atributoSelecionado = 0;
 
     public MecanicaPC() {
     }
@@ -27,13 +29,14 @@ public class MecanicaPC {
     
     
     public static Bebidas verificarId(ArrayList<Bebidas> mao){
-        Bebidas carta = new Bebidas();
         for (int i = 0; i < 5; i++) {
-            if(mao.get(i).getId() > maiorId){
-                maiorId = mao.get(i).getId();
-                carta = mao.get(i);
+            if(mao.get(i) == null){  
+            }else if(mao.get(i).getId() > maiorId){
+                    maiorId = mao.get(i).getId();
+                    carta = mao.get(i);
             }
         }
+     
         return carta;
 
     }
@@ -69,7 +72,6 @@ public class MecanicaPC {
     
     public static int  verificarAtributo(Bebidas carta){
         double maiorDiferenca = 0;
-        int atributoSelecionado = 0;
         
         if((carta.getPreco() < mediaPreco) && ((mediaPreco - carta.getPreco()) > maiorDiferenca )){
             maiorDiferenca = mediaPreco - carta.getPreco();
