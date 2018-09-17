@@ -7,8 +7,6 @@ package SuperGole.control;
 
 import SuperGole.model.Bebidas;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Random;
 import linear.queue.LinkedQueue;
 
 /**

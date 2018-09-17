@@ -8,17 +8,9 @@ package SuperGole.view.internalFrame;
 import SuperGole.control.IniciarJogo;
 import SuperGole.control.MecanicaPC;
 import SuperGole.model.Bebidas;
-import SuperGole.view.panels.JpanelDeck;
-import SuperGole.view.panels.jpanelCarta;
-import SuperGole.view.panels.jpanelMao;
-import java.awt.Color;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Random;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import linear.queue.LinkedQueue;
 
