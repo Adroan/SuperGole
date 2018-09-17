@@ -189,14 +189,14 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         panelMaoJogador.setVisible(false);
         setCarta(Teor6,Preco6,Gosto6,Amnesia6,CustoBen6,cartaUsuario,nomeCarta6);
         setCarta(Teor7,Preco7,Gosto7,Amnesia7,CustoBen7,cartaEscolhidaPc,nomeCarta7);
-        switch(atributoBatalha){
-            case 1: AtributoPc.setText("Preco"); break;
-            case 2: AtributoPc.setText("Gosto"); break;
-            case 3: AtributoPc.setText("TeorAlc"); break; 
-            case 4: AtributoPc.setText("Amnesia"); break;
-            case 5: AtributoPc.setText("CustoBene"); break;
-            default: AtributoPc.setText(""); break;
-        }
+//        switch(atributoBatalha){
+//            case 1: AtributoPc.setText("Preco"); break;
+//            case 2: AtributoPc.setText("Gosto"); break;
+//            case 3: AtributoPc.setText("TeorAlc"); break; 
+//            case 4: AtributoPc.setText("Amnesia"); break;
+//            case 5: AtributoPc.setText("CustoBene"); break;
+//            default: AtributoPc.setText(""); break;
+//        }
         if(vencedor == -1){
             TextoVencedor.setText("Jogador Venceu!!!");
             BotaoContinuar.setEnabled(true);
