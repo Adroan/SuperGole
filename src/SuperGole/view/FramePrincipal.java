@@ -9,8 +9,10 @@ import SuperGole.view.internalFrame.JInternalFrameNovoJogo;
 import javax.swing.JOptionPane;
 
 /**
- *Só pra ter um comentario mas é só o frame principal msm
- * @author Eduardo Woloszyn
+ * Esta classe gera o frame principal da aplicação 
+ * @author Vinicius Thome Vieira, Adroan Covari Heinen, Eduardo Woloszyn
+ * @since 17/09/2018
+ * @version 1.0
  */
 public class FramePrincipal extends javax.swing.JFrame {
 

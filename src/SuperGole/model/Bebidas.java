@@ -10,8 +10,10 @@ import java.util.Random;
 import linear.queue.LinkedQueue;
 
 /**
- *
- * @author Adroan
+ * Esta classe gera as cartas e as embaralha 
+ * @author Vinicius Thome Vieira, Adroan Covari Heinen, Eduardo Woloszyn
+ * @since 17/09/2018
+ * @version 1.0
  */
 public class Bebidas {
     private int id;

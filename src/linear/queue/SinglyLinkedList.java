@@ -1,5 +1,12 @@
 package linear.queue;
 
+/**
+ * Esta classe implementa os metodos de uma lista simplesmente encadeada 
+ * @author Vinicius Thome Vieira, Adroan Covari Heinen, Eduardo Woloszyn
+ * @since 17/09/2018
+ * @version 1.0
+ */
+
 public class SinglyLinkedList<E> {
 	
 	private static class Node<E> {

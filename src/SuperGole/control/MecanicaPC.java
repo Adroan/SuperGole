@@ -9,8 +9,10 @@ import SuperGole.model.Bebidas;
 import java.util.ArrayList;
 
 /**
- *
- * @author vinny
+ * Esta classe gera amecanica de verificação dos atributos do computador
+ * @author Vinicius Thome Vieira, Adroan Covari Heinen, Eduardo Woloszyn
+ * @since 17/09/2018
+ * @version 1.0
  */
 public class MecanicaPC {
     protected ArrayList<Bebidas> maoPc = new ArrayList<Bebidas>();

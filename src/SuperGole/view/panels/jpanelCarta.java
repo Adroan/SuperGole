@@ -6,8 +6,10 @@
 package SuperGole.view.panels;
 
 /**
- *
- * @author Eduardo Woloszyn
+ * Esta classe gera os decks e as "mãos" dos jogador, verifica o vencedor da comparação e entrega as cartas para o final de seu deck
+ * @author Vinicius Thome Vieira, Adroan Covari Heinen, Eduardo Woloszyn
+ * @since 17/09/2018
+ * @version 1.0
  */
 public class jpanelCarta extends javax.swing.JPanel {
 
