@@ -47,17 +47,7 @@ public class IniciarJogo {
         }   
     }
      
-     public static void updateMaoPc(ArrayList<Bebidas> maoPc, LinkedQueue<Bebidas> deck){ // Arrumar
-         int i = 0;
-         boolean cartaInserida = false;
-         while(cartaInserida = false){
-         if(maoPc.get(i) == null){         
-            maoPc.set(i,deck.dequeue());
-            cartaInserida = true;
-         }
-         i++;
-        }
-     }
+     
      public static void vitoriaBatalha(LinkedQueue<Bebidas> deck,Bebidas cartaWin, Bebidas cartaLose){
          deck.enqueue(cartaWin);
          deck.enqueue(cartaLose);
@@ -77,22 +67,9 @@ public class IniciarJogo {
      }
     
     public static void main(String [] args){
-        MecanicaPC pc = new MecanicaPC();
-        int posicao = 0;
-        criarDecks(); // Feito
-        criarMao(); // Feito
-        Bebidas cartaSelecionada = pc.verificarId(maoPc);
         
-                System.out.println("Melhor carta:  " + cartaSelecionada);
-           
  
-        System.out.println("Nome:  " + maoPc.get(posicao).getNome());
-        System.out.println("Preco:  " + maoPc.get(posicao).getPreco() + "    Media: " + pc.getMediaPreco());
-        System.out.println("Gosto:  " + maoPc.get(posicao).getGosto() + "    Media: " + pc.getMediaGosto());
-        System.out.println("Teor:  " + maoPc.get(posicao).getTeorAlco() + "    Media: " + pc.getMediaTeorAlcoolico());
-        System.out.println("Amnesia:  " + maoPc.get(posicao).getAmnesia() + "    Media: " + pc.getMediaAmnesia());
-        System.out.println("CustoBene:  " + maoPc.get(posicao).getCustBene() + "    Media: " + pc.getMediaCustoBeneficio());
-        System.out.println("---------------------");
+        
     
 
     }

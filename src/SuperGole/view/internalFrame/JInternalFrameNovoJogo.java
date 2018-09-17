@@ -35,9 +35,12 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
     protected static LinkedQueue<Bebidas> deckUsuario = new LinkedQueue<Bebidas>();
     protected static int turno;
     protected static IniciarJogo jogo = new IniciarJogo();
-    protected static int posicaoPc;
     protected static int atributoBatalha;
     protected static int vencedor;
+    protected static int maiorId = 0;
+    protected static Bebidas carta = new Bebidas();
+    protected static Bebidas cartaEscolhidaPc = new Bebidas();
+    protected static int posicaoMaiorId;
     /**
      * Creates new form JInternalFrameNovoJogo
      * @return 
@@ -144,22 +147,15 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
 
     private static void enviarBebidaBatalha(Bebidas cartaUsuario){
         MecanicaPC pc = new MecanicaPC();
-        Bebidas cartaPc = new Bebidas();
-        cartaPc = pc.verificarId(maoPc);
-        int i = 0;
-        while(i < 5) {
-            if(cartaPc.equals(maoPc.get(i))){
-                posicaoPc = i;
-            }
-            i++;
-        }
-        atributoBatalha = pc.verificarAtributo(maoPc.get(posicaoPc));
-        vencedor = jogo.batalha(maoPc.get(posicaoPc), cartaUsuario, atributoBatalha);
+        maiorId = 0;
+        verificarId();        
+        atributoBatalha = pc.verificarAtributo(cartaEscolhidaPc);
+        vencedor = jogo.batalha(cartaEscolhidaPc, cartaUsuario, atributoBatalha);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
         panelMaoJogador.setVisible(false);
         setCarta(Teor6,Preco6,Gosto6,Amnesia6,CustoBen6,cartaUsuario,nomeCarta6);
-        setCarta(Teor7,Preco7,Gosto7,Amnesia7,CustoBen7,maoPc.get(posicaoPc),nomeCarta7);
+        setCarta(Teor7,Preco7,Gosto7,Amnesia7,CustoBen7,cartaEscolhidaPc,nomeCarta7);
         switch(atributoBatalha){
             case 1: AtributoPc.setText("Preco"); break;
             case 2: AtributoPc.setText("Gosto"); break;
@@ -172,11 +168,11 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         if(vencedor == -1){
             TextoVencedor.setText("Jogador Venceu!!!");
             BotaoContinuar.setEnabled(true);
-            jogo.vitoriaBatalha(deckUsuario,cartaUsuario,maoPc.get(posicaoPc));
+            jogo.vitoriaBatalha(deckUsuario,cartaUsuario,cartaEscolhidaPc);
         }else if(vencedor == 1){
             TextoVencedor.setText("Computador Venceu!!!");
             BotaoContinuar.setEnabled(true);
-            jogo.vitoriaBatalha(deckPc,maoPc.get(posicaoPc),cartaUsuario);
+            jogo.vitoriaBatalha(deckPc,cartaEscolhidaPc,cartaUsuario);
         }else{
             TextoVencedor.setText("Empate!!!");
             BotaoContinuar.setEnabled(true);
@@ -185,30 +181,22 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         
     }
     private static void enviarBebidaBatalhaUsuario(Bebidas cartaUsuario, int atributo){
-        MecanicaPC pc = new MecanicaPC();
-        Bebidas cartaPc = new Bebidas();
-        cartaPc = pc.verificarId(maoPc);
-        int i = 0;
-        while(i < 5) {
-            if(cartaPc.equals(maoPc.get(i))){
-                posicaoPc = i;
-            }
-            i++;
-        }
-        vencedor = jogo.batalha(maoPc.get(posicaoPc), cartaUsuario, atributo);
+        maiorId = 0;
+        verificarId();
+        vencedor = jogo.batalha(cartaEscolhidaPc, cartaUsuario, atributo);
         nomeCarta6.setVisible(true);
         nomeCarta7.setVisible(true);
         panelMaoJogador.setVisible(false);
         setCarta(Teor6,Preco6,Gosto6,Amnesia6,CustoBen6,cartaUsuario,nomeCarta6);
-        setCarta(Teor7,Preco7,Gosto7,Amnesia7,CustoBen7,maoPc.get(posicaoPc),nomeCarta7);
+        setCarta(Teor7,Preco7,Gosto7,Amnesia7,CustoBen7,cartaEscolhidaPc,nomeCarta7);
         if(vencedor == -1){
             TextoVencedor.setText("Jogador Venceu!!!");
             BotaoContinuar.setEnabled(true);
-            jogo.vitoriaBatalha(deckUsuario,cartaUsuario,maoPc.get(posicaoPc));
+            jogo.vitoriaBatalha(deckUsuario,cartaUsuario,cartaEscolhidaPc);
         }else  if(vencedor == 1){
             TextoVencedor.setText("Computador Venceu!!!");
             BotaoContinuar.setEnabled(true);
-            jogo.vitoriaBatalha(deckPc,maoPc.get(posicaoPc),cartaUsuario);
+            jogo.vitoriaBatalha(deckPc,cartaEscolhidaPc,cartaUsuario);
         }else{
             TextoVencedor.setText("Empate!!!");
             BotaoContinuar.setEnabled(true);
@@ -227,6 +215,20 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
                 }
                 position++;
             }
+    }
+     public static void verificarId(){
+        for (int i = 0; i < 5; i++) {
+            Bebidas cartaTeste = maoPc.get(i);
+            if(cartaTeste == null){
+                System.out.println("Carta nula");
+            }else if (cartaTeste.getId() > maiorId){
+                    maiorId = maoPc.get(i).getId();
+                    cartaEscolhidaPc = maoPc.get(i);
+                    posicaoMaiorId = i;
+                    System.out.println("Carta " + cartaEscolhidaPc.getNome() + " foi escolhida pelo pc");
+                }  
+            }
+        
     }
   
     
@@ -1342,7 +1344,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(0),3);
         maoUsuario.set(0,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1361,7 +1363,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(0));
         maoUsuario.set(0,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1401,7 +1403,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(0),1);
         maoUsuario.set(0,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1420,7 +1422,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(0),2);
         maoUsuario.set(0,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1439,7 +1441,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(0),4);
         maoUsuario.set(0,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1458,7 +1460,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(0),5);
         maoUsuario.set(0,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1477,7 +1479,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(1));
         maoUsuario.set(1,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1496,7 +1498,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(2));
         maoUsuario.set(2,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1515,7 +1517,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(3));
         maoUsuario.set(3,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1534,7 +1536,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalha(maoUsuario.get(4));
         maoUsuario.set(4,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1553,7 +1555,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(1),3);
         maoUsuario.set(1,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1572,7 +1574,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(2),3);
         maoUsuario.set(2,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1591,7 +1593,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(3),3);
         maoUsuario.set(3,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1610,7 +1612,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(4),3);
         maoUsuario.set(4,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1629,7 +1631,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(1),1);
         maoUsuario.set(1,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1648,7 +1650,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(2),1);
         maoUsuario.set(2,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1667,7 +1669,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(3),1);
         maoUsuario.set(3,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1686,7 +1688,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(4),1);
         maoUsuario.set(4,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1705,7 +1707,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(1),2);
         maoUsuario.set(1,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1724,7 +1726,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(2),2);
         maoUsuario.set(2,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1743,7 +1745,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(3),2);
         maoUsuario.set(3,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1762,7 +1764,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(4),2);
         maoUsuario.set(4,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1781,7 +1783,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(1),4);
         maoUsuario.set(1,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1800,7 +1802,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(2),4);
         maoUsuario.set(2,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1819,7 +1821,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(3),4);
         maoUsuario.set(3,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1838,7 +1840,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(4),4);
         maoUsuario.set(4,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1857,7 +1859,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(1),5);
         maoUsuario.set(1,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1876,7 +1878,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(2),5);
         maoUsuario.set(2,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1895,7 +1897,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(3),5);
         maoUsuario.set(3,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
@@ -1914,7 +1916,7 @@ public class JInternalFrameNovoJogo extends javax.swing.JInternalFrame {
         nomeCarta7.setVisible(true);
         enviarBebidaBatalhaUsuario(maoUsuario.get(4),5);
         maoUsuario.set(4,null);
-        maoPc.set(posicaoPc, null);
+        maoPc.set(posicaoMaiorId, null);
         if(deckUsuario.isEmpty()){
 
         }else{
